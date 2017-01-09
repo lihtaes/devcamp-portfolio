@@ -959,3 +959,76 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 44ms (Views: 31.1ms | ActiveRecord: 6.1ms)
 
 
+Started GET "/portfolios/new" for ::1 at 2017-01-09 10:38:38 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 58ms (Views: 45.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-09 10:39:25 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwQnjd/8VX/CYQbjI+NnutfX8Sh/9M4/UcHS44+iW4XptxcHQG0yZBKiPkrrtWBJZ5OOdLt1NvPzF/7lTxZqZg==", "portfolio"=>{"title"=>"First Portfolio Item", "subtitle"=>"The Great First", "body"=>"Lots of text Lots of text Lots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of text"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.9ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "First Portfolio Item"], ["subtitle", "The Great First"], ["body", "Lots of text Lots of text Lots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of text"], ["created_at", 2017-01-09 17:39:25 UTC], ["updated_at", 2017-01-09 17:39:25 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.7ms)
+
+
+  
+ActionController::UrlGenerationError (No route matches {:action=>"show", :controller=>"portfolios"} missing required keys: [:id]):
+  
+app/controllers/portfolios_controller.rb:16:in `block (2 levels) in create'
+app/controllers/portfolios_controller.rb:14:in `create'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (5.1ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.8ms)
+Started GET "/portfolios/new" for ::1 at 2017-01-09 10:40:11 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 37ms (Views: 34.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-09 10:41:10 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FwQnjd/8VX/CYQbjI+NnutfX8Sh/9M4/UcHS44+iW4XptxcHQG0yZBKiPkrrtWBJZ5OOdLt1NvPzF/7lTxZqZg==", "portfolio"=>{"title"=>"First Portfolio Item", "subtitle"=>"The Great First", "body"=>"Lots of text Lots of text Lots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of text"}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "First Portfolio Item"], ["subtitle", "The Great First"], ["body", "Lots of text Lots of text Lots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of textLots of text"], ["created_at", 2017-01-09 17:41:10 UTC], ["updated_at", 2017-01-09 17:41:10 UTC]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 17ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-09 10:41:11 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.6ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     5: <p><%= portfolio_item.title %></p>
+     6: <p><%= portfolio_item.subtitle %></p>
+     7: <p><%= portfolio_item.body %></p>
+     8: <p><%= image_tag portfolio_item.thumb_image %></p>
+     9: 
+    10: <% end %>
+  
+app/views/portfolios/index.html.erb:8:in `block in _app_views_portfolios_index_html_erb___3978904180978861855_70280070478260'
+app/views/portfolios/index.html.erb:4:in `_app_views_portfolios_index_html_erb___3978904180978861855_70280070478260'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.6ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.4ms)
