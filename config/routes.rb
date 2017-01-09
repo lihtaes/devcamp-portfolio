@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+  
+# resources pre-configured with generation of respective scaffolds
   resources :portfolios
-  get 'pages/home'
-
-  get 'pages/about'
-
-  get 'pages/contact'
-
   resources :blogs
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+
+# declaring the route on the left, and mapping it on the right
+  get '/about-me', to: 'pages#about' 
+  get '/contact', to: 'pages#contact'
+
+
+  root to: 'pages#home'
+
 end
