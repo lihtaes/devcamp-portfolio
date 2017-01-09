@@ -1094,3 +1094,50 @@ Processing by PortfoliosController#index as HTML
 Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.5ms)
 
 
+Started GET "/portfolios/5/edit" for ::1 at 2017-01-09 10:55:24 -0700
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 56ms (Views: 29.6ms | ActiveRecord: 5.6ms)
+
+
+Started PATCH "/portfolios/5" for ::1 at 2017-01-09 11:11:13 -0700
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yg46+HkVuGZQNBtWwxXc1iJrwmrlsvgEI8SxiKSyejM0vQpy5oTffYD3I/8LQ9slki+9NiEzAMiBEp2OZAZL0A==", "portfolio"=>{"title"=>"123 title: 4", "subtitle"=>"My great SERVICE", "body"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}, "commit"=>"Update Portfolio", "id"=>"5"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `update' for nil:NilClass):
+  
+app/controllers/portfolios_controller.rb:29:in `block in update'
+app/controllers/portfolios_controller.rb:28:in `update'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.1ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.2ms)
+Started PATCH "/portfolios/5" for ::1 at 2017-01-09 11:11:40 -0700
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yg46+HkVuGZQNBtWwxXc1iJrwmrlsvgEI8SxiKSyejM0vQpy5oTffYD3I/8LQ9slki+9NiEzAMiBEp2OZAZL0A==", "portfolio"=>{"title"=>"123 title: 4", "subtitle"=>"My great SERVICE", "body"=>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."}, "commit"=>"Update Portfolio", "id"=>"5"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[33mUPDATE "portfolios" SET "title" = $1, "subtitle" = $2, "updated_at" = $3 WHERE "portfolios"."id" = $4[0m  [["title", "123 title: 4"], ["subtitle", "My great SERVICE"], ["updated_at", 2017-01-09 18:11:40 UTC], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 16ms (ActiveRecord: 1.6ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-09 11:11:40 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 27ms (Views: 24.6ms | ActiveRecord: 0.6ms)
+
+
