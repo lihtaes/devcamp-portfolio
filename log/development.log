@@ -1032,3 +1032,65 @@ app/views/portfolios/index.html.erb:4:in `_app_views_portfolios_index_html_erb__
   Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
   Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (97.4ms)
+Started GET "/portfolios" for ::1 at 2017-01-09 10:47:25 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.0ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.6ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     5: <p><%= portfolio_item.title %></p>
+     6: <p><%= portfolio_item.subtitle %></p>
+     7: <p><%= portfolio_item.body %></p>
+     8: <p><%= image_tag portfolio_item.thumb_image %></p>
+     9: 
+    10: <% end %>
+  
+app/views/portfolios/index.html.erb:8:in `block in _app_views_portfolios_index_html_erb___3978904180978861855_70280080282720'
+app/views/portfolios/index.html.erb:4:in `_app_views_portfolios_index_html_erb___3978904180978861855_70280080282720'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (96.9ms)
+Started GET "/portfolios" for ::1 at 2017-01-09 10:47:29 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (nil is not a valid asset source):
+     5: <p><%= portfolio_item.title %></p>
+     6: <p><%= portfolio_item.subtitle %></p>
+     7: <p><%= portfolio_item.body %></p>
+     8: <p><%= image_tag portfolio_item.thumb_image %></p>
+     9: 
+    10: <% end %>
+  
+app/views/portfolios/index.html.erb:8:in `block in _app_views_portfolios_index_html_erb___3978904180978861855_70280083193520'
+app/views/portfolios/index.html.erb:4:in `_app_views_portfolios_index_html_erb___3978904180978861855_70280083193520'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (7.4ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (98.3ms)
+Started GET "/portfolios" for ::1 at 2017-01-09 10:47:45 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 45ms (Views: 41.5ms | ActiveRecord: 0.5ms)
+
+
