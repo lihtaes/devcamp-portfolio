@@ -1,7 +1,5 @@
 <h1>Portfolio Items</h1>
 
-<a href="portfolios/new">Create New Item</a>
-
 <%= link_to "Create New Item", new_portfolio_path %>
 
 <% @portfolio_items.each do |portfolio_item| %> 
@@ -11,6 +9,6 @@
 <%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %><br />
 <%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
 <%= link_to "View More", portfolio_path(portfolio_item) %>
-
+<%= link_to "Remove Record", portfolio_path(portfolio_item), method: :delete, data: {confirm: "Are you sure?"} %>
 
 <% end %>

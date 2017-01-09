@@ -1425,3 +1425,56 @@ Processing by PortfoliosController#show as HTML
 Completed 200 OK in 30ms (Views: 25.9ms | ActiveRecord: 0.7ms)
 
 
+Started GET "/portfolios" for ::1 at 2017-01-09 12:47:02 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+Started GET "/portfolios/1" for ::1 at 2017-01-09 12:47:02 -0700
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 65ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPortfolio Load (1.7ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 67ms (Views: 22.6ms | ActiveRecord: 1.7ms)
+
+
+Started DELETE "/portfolios/1" for ::1 at 2017-01-09 12:47:07 -0700
+Processing by PortfoliosController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jnIwtQDcuASPJi5VAvtQ+Go5GfUqeX2hTfa6fqIm6f1wwQA/n03fH1/lFvzKrVcL2n1mqe74hW3vIJZ4YpLYHg==", "id"=>"1"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[31mDELETE FROM "portfolios" WHERE "portfolios"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 4ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-09 12:47:07 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 31ms (Views: 28.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-09 12:47:11 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 30ms (Views: 27.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/2" for ::1 at 2017-01-09 12:47:16 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 25ms (Views: 22.2ms | ActiveRecord: 0.4ms)
+
+
