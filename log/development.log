@@ -4732,3 +4732,222 @@ Creating scope :angular. Overwriting existing method Portfolio.angular.
   [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" ORDER BY "portfolios"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 10]]
+Started GET "/portfolios/new" for ::1 at 2017-01-10 15:21:41 -0700
+Started GET "/portfolios/new" for ::1 at 2017-01-10 15:21:41 -0700
+Processing by PortfoliosController#new as HTML
+Processing by PortfoliosController#new as HTML
+Creating scope :ruby. Overwriting existing method Portfolio.ruby.
+Creating scope :angular. Overwriting existing method Portfolio.angular.
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (2.6ms)
+  Rendered portfolios/new.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 65ms (Views: 41.0ms | ActiveRecord: 3.9ms)
+
+
+Completed 200 OK in 74ms (Views: 53.7ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:21:44 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.8ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:30:49 -0700
+Processing by PortfoliosController#index as HTML
+Creating scope :ruby. Overwriting existing method Portfolio.ruby.
+Creating scope :angular. Overwriting existing method Portfolio.angular.
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 43ms (Views: 36.0ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2017-01-10 15:30:50 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 54ms (Views: 26.3ms | ActiveRecord: 6.2ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-10 15:31:21 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DKHxo0wR2V7RGS7WODpQSlBGF7cQ4zTTK+gJ7Lyid6xSdba0nsJg76LP+15l4PVD5SwZ4276eipI/6OKyGqM7w==", "portfolio"=>{"title"=>"", "subtitle"=>"", "body"=>"", "technologies_attributes"=>{"0"=>{"name"=>"Rails "}, "1"=>{"name"=>"Ruby"}, "2"=>{"name"=>"Ionic"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 33ms (Views: 27.2ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-10 15:31:41 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CV+QK7yRfxBtHMKBlExtDzi50dQoGEp7isJb/RswY9ReHwaYTIZbo2zkD0ToqgYBCxr/43pf1bx9z79xqz6mWQ==", "portfolio"=>{"title"=>"NESTED ATTRS TEST", "subtitle"=>"", "body"=>"asdfasdfasdfasdfasdf", "technologies_attributes"=>{"0"=>{"name"=>"Rails "}, "1"=>{"name"=>"Ruby"}, "2"=>{"name"=>"Ionic"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "NESTED ATTRS TEST"], ["subtitle", ""], ["body", "asdfasdfasdfasdfasdf"], ["main_image", "https://placehold.it/600x400"], ["thumb_image", "https://placehold.it/350x200"], ["created_at", 2017-01-10 22:31:41 UTC], ["updated_at", 2017-01-10 22:31:41 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails "], ["portfolio_id", 11], ["created_at", 2017-01-10 22:31:41 UTC], ["updated_at", 2017-01-10 22:31:41 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ruby"], ["portfolio_id", 11], ["created_at", 2017-01-10 22:31:41 UTC], ["updated_at", 2017-01-10 22:31:41 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Ionic"], ["portfolio_id", 11], ["created_at", 2017-01-10 22:31:41 UTC], ["updated_at", 2017-01-10 22:31:41 UTC]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 14ms (ActiveRecord: 4.1ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:31:41 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:33:43 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/portfolio/11" for ::1 at 2017-01-10 15:33:50 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.6ms)
+
+
+  
+SyntaxError (/Users/bradley/Code/DevCamp/devcamp_portfolio/app/views/portfolios/show.html.erb:12: formal argument cannot be a constant
+_item.techonologies.each do |T| 
+                              ^):
+  
+app/views/portfolios/show.html.erb:12: formal argument cannot be a constant
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.3ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (88.7ms)
+Started GET "/portfolio/11" for ::1 at 2017-01-10 15:34:32 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  Rendered portfolios/show.html.erb within layouts/application (11.4ms)
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (undefined method `techonologies' for #<Portfolio:0x007fc1fade12a0>
+Did you mean?  technologies
+               technologies=
+               technology_ids):
+     9: <h2>Techonologies Used</h2>
+    10: 
+    11: 
+    12: <% @portfolio_item.techonologies.each do |t| %>
+    13: 
+    14: <p> <%= t.name %> </p>
+    15: 
+  
+app/views/portfolios/show.html.erb:12:in `_app_views_portfolios_show_html_erb__1333875966582463083_70235557125760'
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.2ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (90.2ms)
+Started GET "/portfolio/11" for ::1 at 2017-01-10 15:35:32 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+Creating scope :ruby. Overwriting existing method Portfolio.ruby.
+Creating scope :angular. Overwriting existing method Portfolio.angular.
+  [1m[36mPortfolio Load (0.6ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  Rendered portfolios/show.html.erb within layouts/application (37.2ms)
+Completed 200 OK in 332ms (Views: 291.2ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/portfolio/11" for ::1 at 2017-01-10 15:35:36 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"11"}
+  [1m[36mPortfolio Load (1.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 11], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.7ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 11]]
+  Rendered portfolios/show.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 28ms (Views: 22.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:36:25 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 29ms (Views: 26.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:36:26 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 28ms (Views: 25.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2017-01-10 15:36:28 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (19.5ms)
+Completed 200 OK in 57ms (Views: 52.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-10 15:37:08 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CITQBrmxElWIPQAAR95oD04ZE2zsXuUbAQIA58yt0uNWUJcRa2Kr5Pvr1YgaBM0G+3MdOJJHq+JiFaqBuGUpoA==", "portfolio"=>{"title"=>"nested test two", "subtitle"=>"", "body"=>"adsfgdsafgs", "technologies_attributes"=>{"0"=>{"name"=>"PHP"}, "1"=>{"name"=>"Javascript"}, "2"=>{"name"=>"Jquery"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "nested test two"], ["subtitle", ""], ["body", "adsfgdsafgs"], ["main_image", "https://placehold.it/600x400"], ["thumb_image", "https://placehold.it/350x200"], ["created_at", 2017-01-10 22:37:08 UTC], ["updated_at", 2017-01-10 22:37:08 UTC]]
+  [1m[35mSQL (1.1ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "PHP"], ["portfolio_id", 12], ["created_at", 2017-01-10 22:37:08 UTC], ["updated_at", 2017-01-10 22:37:08 UTC]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Javascript"], ["portfolio_id", 12], ["created_at", 2017-01-10 22:37:08 UTC], ["updated_at", 2017-01-10 22:37:08 UTC]]
+  [1m[35mSQL (0.7ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Jquery"], ["portfolio_id", 12], ["created_at", 2017-01-10 22:37:08 UTC], ["updated_at", 2017-01-10 22:37:08 UTC]]
+  [1m[35m (1.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 12ms (ActiveRecord: 4.4ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:37:08 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.9ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 28ms (Views: 25.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/portfolio/12" for ::1 at 2017-01-10 15:37:13 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.3ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 12]]
+  Rendered portfolios/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 28ms (Views: 23.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-10 15:37:23 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.5ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.5ms)
+
+
