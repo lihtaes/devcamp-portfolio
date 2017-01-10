@@ -16,6 +16,9 @@ def self.ruby
 end
 
 
+
+
+
 #**MORE SCOPE***
 #Scope can also be defined as in the two lines below, and this is generally the preferred method for doing so.  
 #The reason this is done here as opposed to in the controller is because it makes for cleaner code, and the controller is really where simple things should be done
@@ -29,5 +32,11 @@ scope :ruby, -> {where(subtitle: 'Ruby on Rails')}
 scope :angular, -> {where(subtitle: 'Angular')}
 
 
+#initialization takes place when the NEW method is called in the controller
+after_intialize :set_defaults
 
+  def set_defaults
+    self.main_image ||= "https://placeholdit.imgix.net/~text?txtsize=33&txt=600×400&w=600&h=400"
+    self.thumb_image ||= "https://placeholdit.imgix.net/~text?txtsize=33&txt=350×200&w=350&h=200"
+  end
 end
