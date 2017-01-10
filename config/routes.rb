@@ -11,9 +11,18 @@ Rails.application.routes.draw do
   end
 
 
-# declaring the route on the left, and mapping it on the right
+# declaring the route on the left (what is accepted by the URL), and mapping it on the right (which controller it goes to, and which method in that controller)
   get '/about-me', to: 'pages#about' 
   get '/contact', to: 'pages#contact'
+
+
+  #******SCOPE EXAMPLE********
+  #So here we route the url "scope-items" into the portfolios controller right 
+  #into the scope method, where the rest of the magic can happen...  Check out 
+  #the controller for more.
+  get 'scope-items', to: 'portfolios#scope'
+#************END SCOPE EXAMPLE IN ROUTE FILE****
+
 
   root to: 'pages#home'
 

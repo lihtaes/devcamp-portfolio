@@ -1,7 +1,20 @@
 class PortfoliosController < ApplicationController
+  
   def index
     @portfolio_items = Portfolio.all
   end 
+
+#****SCOPE EXAMPLE METHOD****
+
+#So in the method below you have an example of using scope to reference a specific data query, 
+#and the scope is defined in the model for the portfolio feature
+
+#*********  There is an example route for this in the routes file, as well as an exmple view
+  def scope
+    @scope_portfolio_items = Portfolio.ruby
+  end
+#***************END SCOPE EXAMPLE FOR CONTROLLER
+
 
   def new
     @portfolio_item = Portfolio.new
