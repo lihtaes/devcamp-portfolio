@@ -9,6 +9,14 @@
   </head>
 
   <body>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+
     <%= yield %>
+<!--   Here is the follow up for the session variable code from the application controller -->
+  <% if session[:source] %>
+      <p>  Thanks for visiting me from <%= session[:source] %> </p>
+  <% end %>
+
   </body>
 </html>
