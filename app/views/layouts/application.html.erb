@@ -12,6 +12,15 @@
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
 
+
+  <% if current_user %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "register", new_user_registration_path %>
+    <%= link_to "login", new_user_session_path %>
+
+  <% end %>
+
     <%= yield %>
 <!--   Here is the follow up for the session variable code from the application controller -->
   <% if session[:source] %>
