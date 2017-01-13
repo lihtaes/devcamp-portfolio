@@ -4,7 +4,10 @@ class ApplicationController < ActionController::Base
   include SetSource
 #include CurrentUserConcern
   include DefaultPageContent
+<<<<<<< HEAD
 
+=======
+>>>>>>> 2f4daa4bfd0e4db31e358b4ee831bcd4c17269b5
 
 
 
