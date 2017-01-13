@@ -18,3 +18,6 @@
 
 #dont include the secrets!
 /config/secrets.yml
+
+#ignore the irrelevant log file
+/log/development.log
