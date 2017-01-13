@@ -15,16 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-
-    <div>
-    
-      <div class='inline'><%= link_to "home", root_path %></div>
-      <div class='inline'><%= link_to 'about', about_me_path %></div>
-      <div class='inline'><%= link_to 'blogs', blogs_path %></div>
-      <div class='inline'><%= link_to 'portfolios', portfolios_path %></div>
-      <div class='inline'><%= link_to 'contact', contact_path %></div>
-
-    </div>
+    <%= render 'shared/nav' %>
 
 
   <% if current_user.is_a?(User) %>

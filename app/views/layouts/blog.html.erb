@@ -15,6 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
+    <%= render 'shared/nav' %>
 
 
 
@@ -28,18 +29,6 @@
 
     <%= yield %>
 
-
-
-    
-    <div>
-    
-      <div class='inline'><%= link_to "home", root_path %></div>
-      <div class='inline'><%= link_to 'about', about_me_path %></div>
-      <div class='inline'><%= link_to 'blogs', blogs_path %></div>
-      <div class='inline'><%= link_to 'portfolios', portfolios_path %></div>
-      <div class='inline'><%= link_to 'contact', contact_path %></div>
-
-    </div>
 <!--   Here is the follow up for the session variable code from the set_source concern in controllers/concerns -->
   <% if session[:source] %>
       <p>  Thanks for visiting me from <%= session[:source] %> </p>
