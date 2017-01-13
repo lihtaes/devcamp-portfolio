@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= @page_title %></title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'portfolios', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="keywords" content="<%= @seo_keywords %>"/>
+
+  </head>
+
+  <body>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+
+    <div>
+    
+      <div class='inline'><%= link_to "home", root_path %></div>
+      <div class='inline'><%= link_to 'about', about_me_path %></div>
+      <div class='inline'><%= link_to 'blogs', blogs_path %></div>
+      <div class='inline'><%= link_to 'portfolios', portfolios_path %></div>
+      <div class='inline'><%= link_to 'contact', contact_path %></div>
+
+    </div>
+
+
+  <% if current_user.is_a?(User) %>
+    <%= link_to "logout", destroy_user_session_path, method: :delete %>
+  <% else %>
+    <%= link_to "register", new_user_registration_path %>
+    <%= link_to "login", new_user_session_path %>
+
+  <% end %>
+
+    <%= yield %>
+<!--   Here is the follow up for the session variable code from the set_source concern in controllers/concerns -->
+  <% if session[:source] %>
+      <p>  Thanks for visiting me from <%= session[:source] %> </p>
+  <% end %>
+
+  </body>
+</html>
