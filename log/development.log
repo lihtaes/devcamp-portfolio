@@ -7096,393 +7096,393 @@ Completed 200 OK in 34ms (Views: 30.7ms | ActiveRecord: 1.1ms)
   [1m[35mSQL (1.4ms)[0m  [1m[33mUPDATE "users" SET "name" = 'Bob Mcbro'[0m
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
   [1m[35m (0.9ms)[0m  [1m[34mSELECT COUNT(*) FROM "users"[0m
-Started GET "/home" for ::1 at 2017-01-12 09:42:21 -0700
+  
+Started GET "/" for ::1 at 2017-01-13 09:53:15 -0700
   [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
-  
-ActionController::RoutingError (No route matches [GET] "/home"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (9.7ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (7.4ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (10.3ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (150.4ms)
-Started GET "/" for ::1 at 2017-01-12 09:42:29 -0700
 DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
 Processing by PagesController#home as HTML
   Rendering pages/home.html.erb within layouts/application
-  [1m[36mBlog Load (0.9ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (32.4ms)
-Completed 200 OK in 259ms (Views: 230.8ms | ActiveRecord: 10.0ms)
-
-
-Started GET "/login" for ::1 at 2017-01-12 09:42:32 -0700
-Processing by Devise::SessionsController#new as HTML
-  Rendering devise/sessions/new.html.erb within layouts/application
-  Rendered devise/shared/_links.html.erb (1.2ms)
-  Rendered devise/sessions/new.html.erb within layouts/application (21.6ms)
-Completed 200 OK in 91ms (Views: 66.7ms | ActiveRecord: 8.5ms)
-
-
-Started POST "/login" for ::1 at 2017-01-12 09:42:48 -0700
-Processing by Devise::SessionsController#create as HTML
-  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2XM2ZqeP67uQwoY++UVotuTiF/TShiuG0Fv3BIABp+9YvbtNxdDMU6qKCsiqKxjxZjwQ/++pEj82NUnlKj8DzQ==", "user"=>{"email"=>"test@test.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
-  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "test@test.com"], ["LIMIT", 1]]
-  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
-  [1m[35mSQL (0.7ms)[0m  [1m[33mUPDATE "users" SET "current_sign_in_at" = $1, "last_sign_in_at" = $2, "sign_in_count" = $3, "updated_at" = $4 WHERE "users"."id" = $5[0m  [["current_sign_in_at", 2017-01-12 16:42:48 UTC], ["last_sign_in_at", 2017-01-11 18:16:04 UTC], ["sign_in_count", 4], ["updated_at", 2017-01-12 16:42:48 UTC], ["id", 1]]
-  [1m[35m (1.1ms)[0m  [1m[35mCOMMIT[0m
-Redirected to http://localhost:3000/
-Completed 302 Found in 188ms (ActiveRecord: 4.6ms)
-
-
-Started GET "/" for ::1 at 2017-01-12 09:42:48 -0700
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mBlog Load (0.7ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (10.8ms)
-Completed 200 OK in 51ms (Views: 46.1ms | ActiveRecord: 2.8ms)
-
-
-Started GET "/" for ::1 at 2017-01-12 09:49:11 -0700
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (6.3ms)
-Completed 200 OK in 34ms (Views: 29.6ms | ActiveRecord: 1.7ms)
-
-
-Started GET "/blogs" for ::1 at 2017-01-12 09:49:20 -0700
-Processing by BlogsController#index as HTML
-  Rendering blogs/index.html.erb within layouts/application
-  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  Rendered blogs/index.html.erb within layouts/application (7.1ms)
-  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 36ms (Views: 30.7ms | ActiveRecord: 2.6ms)
-
-
-Started GET "/blogs" for ::1 at 2017-01-12 09:52:06 -0700
-  
-SyntaxError (/Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting keyword_end):
-  
-app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting keyword_end
-app/controllers/blogs_controller.rb:1:in `<top (required)>'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (6.1ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.9ms)
-Started GET "/" for ::1 at 2017-01-12 09:52:12 -0700
-  
-SyntaxError (/Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting keyword_end):
-  
-app/controllers/application_controller.rb:23: syntax error, unexpected end-of-input, expecting keyword_end
-app/controllers/pages_controller.rb:1:in `<top (required)>'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.2ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (80.8ms)
-Started GET "/" for ::1 at 2017-01-12 09:52:24 -0700
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/application_controller.rb:18)
-Processing by PagesController#home as HTML
-  Rendering pages/home.html.erb within layouts/application
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (36.3ms)
-Completed 200 OK in 67ms (Views: 54.3ms | ActiveRecord: 5.0ms)
-
-
-Started GET "/blog" for ::1 at 2017-01-12 09:53:24 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/blog"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (9.0ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.4ms)
-Started GET "/blogs" for ::1 at 2017-01-12 09:53:27 -0700
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/application_controller.rb:18)
-Processing by BlogsController#index as HTML
-  Rendering blogs/index.html.erb within layouts/application
-  [1m[36mBlog Load (1.1ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  Rendered blogs/index.html.erb within layouts/application (23.8ms)
-  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 73ms (Views: 51.0ms | ActiveRecord: 15.6ms)
-
-
-Started GET "/blogs" for ::1 at 2017-01-12 09:53:30 -0700
-Processing by BlogsController#index as HTML
-  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  Rendered blogs/index.html.erb within layouts/application (6.3ms)
-  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-Completed 200 OK in 36ms (Views: 31.2ms | ActiveRecord: 2.0ms)
+  [1m[36mSkill Load (0.6ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 287ms (Views: 246.2ms | ActiveRecord: 14.9ms)
 
 
-Started GET "/pages" for ::1 at 2017-01-12 09:53:58 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/pages"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (9.1ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (118.3ms)
-Started GET "/page" for ::1 at 2017-01-12 09:54:06 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/page"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (9.1ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.4ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.9ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (115.1ms)
-Started GET "/pages/home" for ::1 at 2017-01-12 09:54:17 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/pages/home"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (8.6ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (112.2ms)
-Started GET "/home" for ::1 at 2017-01-12 09:54:23 -0700
-  
-ActionController::RoutingError (No route matches [GET] "/home"):
-  
-actionpack (5.0.1) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
-web-console (3.4.0) lib/web_console/middleware.rb:135:in `call_app'
-web-console (3.4.0) lib/web_console/middleware.rb:28:in `block in call'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `catch'
-web-console (3.4.0) lib/web_console/middleware.rb:18:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
-railties (5.0.1) lib/rails/rack/logger.rb:36:in `call_app'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `block in call'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `block in tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:26:in `tagged'
-activesupport (5.0.1) lib/active_support/tagged_logging.rb:69:in `tagged'
-railties (5.0.1) lib/rails/rack/logger.rb:24:in `call'
-sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/request_id.rb:24:in `call'
-rack (2.0.1) lib/rack/method_override.rb:22:in `call'
-rack (2.0.1) lib/rack/runtime.rb:22:in `call'
-activesupport (5.0.1) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/executor.rb:12:in `call'
-actionpack (5.0.1) lib/action_dispatch/middleware/static.rb:136:in `call'
-rack (2.0.1) lib/rack/sendfile.rb:111:in `call'
-railties (5.0.1) lib/rails/engine.rb:522:in `call'
-puma (3.6.2) lib/puma/configuration.rb:225:in `call'
-puma (3.6.2) lib/puma/server.rb:578:in `handle_request'
-puma (3.6.2) lib/puma/server.rb:415:in `process_client'
-puma (3.6.2) lib/puma/server.rb:275:in `block in run'
-puma (3.6.2) lib/puma/thread_pool.rb:116:in `block in spawn_thread'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.3ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (8.4ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (114.0ms)
-Started GET "/" for ::1 at 2017-01-12 09:56:41 -0700
+Started GET "/" for ::1 at 2017-01-13 09:54:02 -0700
 DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from <class:ApplicationController> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/application_controller.rb:18)
 Processing by PagesController#home as HTML
   Rendering pages/home.html.erb within layouts/application
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   [1m[36mBlog Load (0.4ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
   [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (25.5ms)
-Completed 200 OK in 55ms (Views: 46.1ms | ActiveRecord: 1.3ms)
+  Rendered pages/home.html.erb within layouts/application (27.3ms)
+Completed 200 OK in 64ms (Views: 50.0ms | ActiveRecord: 1.4ms)
 
 
-Started GET "/" for ::1 at 2017-01-12 10:02:38 -0700
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
-  
-ActionController::RoutingError (undefined method `before_action' for SetSource:Module):
-  
-app/controllers/concerns/set_source.rb:7:in `<module:SetSource>'
-app/controllers/concerns/set_source.rb:1:in `<top (required)>'
-app/controllers/application_controller.rb:4:in `<class:ApplicationController>'
-app/controllers/application_controller.rb:1:in `<top (required)>'
-app/controllers/pages_controller.rb:1:in `<top (required)>'
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
-  Rendered collection of /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_route.html.erb [36 times] (8.4ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
-  Rendering /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
-  Rendered /Users/bradley/.rvm/gems/ruby-2.4.0@global/gems/actionpack-5.0.1/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (119.0ms)
-Started GET "/" for ::1 at 2017-01-12 10:05:20 -0700
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:SetSource> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/set_source.rb:8)
-DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DefaultPageContent> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/default_page_content.rb:5)
+Started GET "/blogs" for ::1 at 2017-01-13 09:54:30 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (1.0ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (6.9ms)
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.9ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/blogs/new" for ::1 at 2017-01-13 09:54:35 -0700
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (32.6ms)
+  Rendered blogs/new.html.erb within layouts/application (35.3ms)
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 70ms (Views: 65.8ms | ActiveRecord: 1.6ms)
+
+
+Started POST "/blogs" for ::1 at 2017-01-13 09:54:49 -0700
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1BwcPS3g8zb0sNKOZfy8DLaIgkyKuvH9xtVraUqTQlTnYIL/dyvzyHEWZNC1UgzxBVda3PjfMmctqU/LKEaiUw==", "blog"=>{"title"=>"bloggy", "body"=>"BLOGGY BLOGGY BLOGGY"}, "commit"=>"Create Blog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (2.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "bloggy"], ["LIMIT", 1]]
+  [1m[35mSQL (1.0ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "bloggy"], ["body", "BLOGGY BLOGGY BLOGGY"], ["created_at", 2017-01-13 16:54:49 UTC], ["updated_at", 2017-01-13 16:54:49 UTC], ["slug", "bloggy"]]
+  [1m[35m (40.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/blogs/bloggy
+Completed 302 Found in 168ms (ActiveRecord: 44.0ms)
+
+
+Started GET "/blogs/bloggy" for ::1 at 2017-01-13 09:54:49 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"bloggy"}
+  [1m[36mBlog Load (3.1ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "bloggy"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (1.0ms)
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 40ms (Views: 32.6ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 09:54:52 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (9.5ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 09:56:47 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (10.3ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 61ms (Views: 58.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 09:56:49 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (6.7ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 38ms (Views: 34.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:56:53 -0700
 Processing by PagesController#home as HTML
   Rendering pages/home.html.erb within layouts/application
-  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.5ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:57:09 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (54.4ms)
+Completed 200 OK in 323ms (Views: 274.9ms | ActiveRecord: 15.4ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 09:57:13 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
   [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
-  [1m[36mSkill Load (0.4ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
-  Rendered pages/home.html.erb within layouts/application (30.8ms)
-Completed 200 OK in 69ms (Views: 57.7ms | ActiveRecord: 1.5ms)
+  Rendered blogs/index.html.erb within layouts/application (6.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 33ms (Views: 30.2ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs/new" for ::1 at 2017-01-13 09:57:16 -0700
+Processing by BlogsController#new as HTML
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (17.6ms)
+  Rendered blogs/new.html.erb within layouts/application (19.6ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 50ms (Views: 46.4ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/blogs" for ::1 at 2017-01-13 09:57:41 -0700
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NKZkmBEYonvNr4ngUvvwgDK7N/7H67POy0elrs8iAnYH2vpaS9OihUgJP76CVUB9gWTvbrWOcFQgO4EMrfficQ==", "blog"=>{"title"=>"", "body"=>""}, "commit"=>"Create Blog"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering blogs/new.html.erb within layouts/application
+  Rendered blogs/_form.html.erb (2.3ms)
+  Rendered blogs/new.html.erb within layouts/application (4.4ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 37ms (Views: 31.1ms | ActiveRecord: 1.0ms)
+
+
+Started POST "/blogs" for ::1 at 2017-01-13 09:58:07 -0700
+Processing by BlogsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cPUJ1AmrgAiaG/jD2C6XO4BDvsDUJ6LqNYC72O7P/gYHqaaAzTiRytGlXosleEThCKNptIjBeViGnFYP02dbyA==", "blog"=>{"title"=>"Bloggy McBloggerson", "body"=>"BLOGGGGG OH BLOG HOW CAN THIS BE MY BLOG IS SOOOOO BLOOOOGGGGGGGGGGYYYYYY"}, "commit"=>"Create Blog"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mBlog Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "blogs" WHERE ("blogs"."id" IS NOT NULL) AND "blogs"."slug" = $1 LIMIT $2[0m  [["slug", "bloggy-mcbloggerson"], ["LIMIT", 1]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "blogs" ("title", "body", "created_at", "updated_at", "slug") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["title", "Bloggy McBloggerson"], ["body", "BLOGGGGG OH BLOG HOW CAN THIS BE MY BLOG IS SOOOOO BLOOOOGGGGGGGGGGYYYYYY"], ["created_at", 2017-01-13 16:58:07 UTC], ["updated_at", 2017-01-13 16:58:07 UTC], ["slug", "bloggy-mcbloggerson"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/blogs/bloggy-mcbloggerson
+Completed 302 Found in 88ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/blogs/bloggy-mcbloggerson" for ::1 at 2017-01-13 09:58:07 -0700
+Processing by BlogsController#show as HTML
+  Parameters: {"id"=>"bloggy-mcbloggerson"}
+  [1m[36mBlog Load (0.6ms)[0m  [1m[34mSELECT  "blogs".* FROM "blogs" WHERE "blogs"."slug" = $1 ORDER BY "blogs"."id" ASC LIMIT $2[0m  [["slug", "bloggy-mcbloggerson"], ["LIMIT", 1]]
+  Rendering blogs/show.html.erb within layouts/application
+  Rendered blogs/show.html.erb within layouts/application (0.8ms)
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 200 OK in 30ms (Views: 25.4ms | ActiveRecord: 1.4ms)
+
+
+Started DELETE "/logout" for ::1 at 2017-01-13 09:58:11 -0700
+Processing by Devise::SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"fjJT2UkcXLUnKgE5VQgPmnRKNekwfuOPKDdOaK4iVz0JbvyNjY9Nd2yUp3GoXtxA/KrinWyYOD2bK6O/k4ry8w=="}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 19ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:58:11 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (9.5ms)
+Completed 200 OK in 36ms (Views: 33.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/register" for ::1 at 2017-01-13 09:58:13 -0700
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (1.3ms)
+  Rendered devise/registrations/new.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 41ms (Views: 39.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/" for ::1 at 2017-01-13 09:58:39 -0700
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IqIXiGNA5WLa6jLvZ50sFKKn/zgkawnYfiLG9i2jYaIL2Gz+XiojKIohi1p+0jayQsZfPLL0IZ2AW960iPi/3Q==", "user"=>{"email"=>"test5@test.com", "name"=>"Bob McBro III", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "test5@test.com"], ["LIMIT", 1]]
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "created_at", "updated_at", "name") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["email", "test5@test.com"], ["encrypted_password", "$2a$11$EaAakcsLewBAgYyhALZLV.CYHxAOhUdQ7qJRoifF6zA.UohbHVyRG"], ["created_at", 2017-01-13 16:58:39 UTC], ["updated_at", 2017-01-13 16:58:39 UTC], ["name", "Bob McBro III"]]
+  [1m[35m (82.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "users" SET "sign_in_count" = $1, "current_sign_in_at" = $2, "last_sign_in_at" = $3, "current_sign_in_ip" = $4, "last_sign_in_ip" = $5, "updated_at" = $6 WHERE "users"."id" = $7[0m  [["sign_in_count", 1], ["current_sign_in_at", 2017-01-13 16:58:39 UTC], ["last_sign_in_at", 2017-01-13 16:58:39 UTC], ["current_sign_in_ip", "::1/128"], ["last_sign_in_ip", "::1/128"], ["updated_at", 2017-01-13 16:58:39 UTC], ["id", 5]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 249ms (ActiveRecord: 85.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 09:58:39 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 32ms (Views: 29.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 10:09:00 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.3ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 32ms (Views: 29.1ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 10:10:46 -0700
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.8ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.7ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (56.5ms)
+Completed 200 OK in 300ms (Views: 256.0ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 10:10:51 -0700
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (7.0ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 39ms (Views: 35.6ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/blogs" for ::1 at 2017-01-13 10:19:41 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by BlogsController#index as HTML
+  Rendering blogs/index.html.erb within layouts/application
+  [1m[36mBlog Load (0.5ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  Rendered blogs/index.html.erb within layouts/application (18.9ms)
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 66ms (Views: 47.4ms | ActiveRecord: 10.9ms)
+
+
+Started GET "/" for ::1 at 2017-01-13 10:19:47 -0700
+Processing by PagesController#home as HTML
+  Rendering pages/home.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  [1m[36mBlog Load (0.3ms)[0m  [1m[34mSELECT "blogs".* FROM "blogs"[0m
+  [1m[36mSkill Load (0.2ms)[0m  [1m[34mSELECT "skills".* FROM "skills"[0m
+  Rendered pages/home.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 68ms (Views: 56.4ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-13 10:19:53 -0700
+Processing by PortfoliosController#index as HTML
+Creating scope :ruby. Overwriting existing method Portfolio.ruby.
+Creating scope :angular. Overwriting existing method Portfolio.angular.
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (1.0ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (18.3ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 40.6ms | ActiveRecord: 6.2ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-13 10:21:06 -0700
+DEPRECATION WARNING: before_filter is deprecated and will be removed in Rails 5.1. Use before_action instead. (called from block in <module:DeviseWhitelist> at /Users/bradley/Code/DevCamp/devcamp_portfolio/app/controllers/concerns/devise_whitelist.rb:5)
+Processing by PortfoliosController#index as HTML
+Creating scope :ruby. Overwriting existing method Portfolio.ruby.
+Creating scope :angular. Overwriting existing method Portfolio.angular.
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (19.8ms)
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 91ms (Views: 70.4ms | ActiveRecord: 10.2ms)
+
+
+Started GET "/portfolio/5" for ::1 at 2017-01-13 10:21:10 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mPortfolio Load (0.3ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 5]]
+  Rendered portfolios/show.html.erb within layouts/application (22.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 57ms (Views: 48.1ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-13 10:21:17 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (6.2ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 55ms (Views: 52.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolios/new" for ::1 at 2017-01-13 10:21:19 -0700
+Processing by PortfoliosController#new as HTML
+  Rendering portfolios/new.html.erb within layouts/application
+  Rendered portfolios/new.html.erb within layouts/application (21.0ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 58ms (Views: 45.3ms | ActiveRecord: 3.1ms)
+
+
+Started POST "/portfolios" for ::1 at 2017-01-13 10:21:42 -0700
+Processing by PortfoliosController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"679kims1FrkjNQIzG9sNUTW8c7Pw2dKktQY5LgU5u8IKHt0ikg+nSTGXAUWfYL99rtDe9SCAkULJj7cTRBegLA==", "portfolio"=>{"title"=>"Param Refac Tesdt", "subtitle"=>"BLAHASD", "body"=>"body body", "technologies_attributes"=>{"0"=>{"name"=>"Rails"}, "1"=>{"name"=>"PHP"}, "2"=>{"name"=>"SQL"}}}, "commit"=>"Create Portfolio"}
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "portfolios" ("title", "subtitle", "body", "main_image", "thumb_image", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["title", "Param Refac Tesdt"], ["subtitle", "BLAHASD"], ["body", "body body"], ["main_image", "https://placehold.it/600x400"], ["thumb_image", "https://placehold.it/350x200"], ["created_at", 2017-01-13 17:21:42 UTC], ["updated_at", 2017-01-13 17:21:42 UTC]]
+  [1m[35mSQL (0.6ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Rails"], ["portfolio_id", 13], ["created_at", 2017-01-13 17:21:42 UTC], ["updated_at", 2017-01-13 17:21:42 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "PHP"], ["portfolio_id", 13], ["created_at", 2017-01-13 17:21:42 UTC], ["updated_at", 2017-01-13 17:21:42 UTC]]
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "technologies" ("name", "portfolio_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "SQL"], ["portfolio_id", 13], ["created_at", 2017-01-13 17:21:42 UTC], ["updated_at", 2017-01-13 17:21:42 UTC]]
+  [1m[35m (39.9ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 50ms (ActiveRecord: 42.1ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-13 10:21:43 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.5ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 36ms (Views: 31.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/portfolio/13" for ::1 at 2017-01-13 10:21:49 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.5ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 13]]
+  Rendered portfolios/show.html.erb within layouts/application (2.9ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 29.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/portfolios/13/edit" for ::1 at 2017-01-13 10:21:56 -0700
+Processing by PortfoliosController#edit as HTML
+  Parameters: {"id"=>"13"}
+  [1m[36mPortfolio Load (0.7ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  Rendering portfolios/edit.html.erb within layouts/application
+  Rendered portfolios/edit.html.erb within layouts/application (2.6ms)
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 35ms (Views: 29.4ms | ActiveRecord: 1.4ms)
+
+
+Started PATCH "/portfolios/13" for ::1 at 2017-01-13 10:22:00 -0700
+Processing by PortfoliosController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k2v0tT9tqlXHYugLVdj0hjPLo2JNUpTR3qGXxIva6qEnIT2c+Y9rX7qZ3yDffcFw4weghwCWsZLKzpnJUsR1jA==", "portfolio"=>{"title"=>"Param Refac Test", "subtitle"=>"BLAHASD", "body"=>"body body"}, "commit"=>"Update Portfolio", "id"=>"13"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 13], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  [1m[33mUPDATE "portfolios" SET "title" = $1, "updated_at" = $2 WHERE "portfolios"."id" = $3[0m  [["title", "Param Refac Test"], ["updated_at", 2017-01-13 17:22:00 UTC], ["id", 13]]
+  [1m[35m (40.2ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/portfolios
+Completed 302 Found in 46ms (ActiveRecord: 41.3ms)
+
+
+Started GET "/portfolios" for ::1 at 2017-01-13 10:22:00 -0700
+Processing by PortfoliosController#index as HTML
+  Rendering portfolios/index.html.erb within layouts/application
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT "portfolios".* FROM "portfolios"[0m
+  Rendered portfolios/index.html.erb within layouts/application (5.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 30.1ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/portfolio/12" for ::1 at 2017-01-13 10:22:05 -0700
+Processing by PortfoliosController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mPortfolio Load (0.4ms)[0m  [1m[34mSELECT  "portfolios".* FROM "portfolios" WHERE "portfolios"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  Rendering portfolios/show.html.erb within layouts/application
+  [1m[36mTechnology Load (0.4ms)[0m  [1m[34mSELECT "technologies".* FROM "technologies" WHERE "technologies"."portfolio_id" = $1[0m  [["portfolio_id", 12]]
+  Rendered portfolios/show.html.erb within layouts/application (2.7ms)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+Completed 200 OK in 34ms (Views: 29.4ms | ActiveRecord: 1.3ms)
 
 
