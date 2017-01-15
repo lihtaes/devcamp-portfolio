@@ -15,7 +15,7 @@
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
 
-    <%= render 'shared/nav' %>
+    <%= render 'shared/nav', location: 'bottom' %>
 
 
 
@@ -24,10 +24,13 @@
   <% else %>
     <%= link_to "register", new_user_registration_path %>
     <%= link_to "login", new_user_session_path %>
-
   <% end %>
 
+
+
     <%= yield %>
+
+
 
 <!--   Here is the follow up for the session variable code from the set_source concern in controllers/concerns -->
   <% if session[:source] %>
