@@ -3,14 +3,8 @@
 <%= link_to "Create New Item", new_portfolio_url %>
 <br />
 <hr>
+<!-- how to render a partial with a custom name (manual collection vs standard collection), instead of 'portfolio' we had 
+'portfolio_item' so we have to tell rails this using the following syntax: -->
+<%= render partial: 'portfolio_item', collection: @portfolio_items %> 
 
-<% @portfolio_items.each do |portfolio_item| %> 
-<h2><%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %></h2>
-<p><%= portfolio_item.subtitle %></p>
-<p><%= portfolio_item.body %></p>
-<%= image_tag portfolio_item.thumb_image unless portfolio_item.thumb_image.nil? %><br />
-<%= link_to "Edit", edit_portfolio_path(portfolio_item) %>
-<%= link_to "View More", portfolio_show_path(portfolio_item) %>
-<%= link_to "Remove Record", portfolio_path(portfolio_item), method: :delete, data: {confirm: "Are you sure?"} %>
 <hr>
-<% end %>
