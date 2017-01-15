@@ -4,35 +4,22 @@
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <meta name="keywords" content="<%= @seo_keywords %>"/>
 
   </head>
-
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
+    <%= render 'shared/notice_alert' %>
 
     <%= render 'shared/nav', location: 'top' %>
 
-
-
     <%= login_helper %>
-
-
 
     <%= yield %>
 
-
-
-<!--   Here is the follow up for the session variable code from the set_source concern in controllers/concerns -->
-  <% if session[:source] %>
-      <p>  Thanks for visiting me from <%= session[:source] %> </p>
-  <% end %>
+    <%= source_helper("application") %>
 
   </body>
 </html>

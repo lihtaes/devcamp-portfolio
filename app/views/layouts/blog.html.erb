@@ -11,10 +11,7 @@
 
   </head>
   <body>
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-
-
+    <%= render 'shared/notice_alert' %>
 
     <%= render 'shared/nav', location: 'bottom' %>
 
@@ -22,12 +19,7 @@
 
     <%= yield %>
 
-
-
-<!--   Here is the follow up for the session variable code from the set_source concern in controllers/concerns -->
-  <% if session[:source] %>
-      <p>  Thanks for visiting me from <%= session[:source] %> </p>
-  <% end %>
+    <%= source_helper("blog") %>
 
   </body>
 </html>
