@@ -1,9 +1,3 @@
-GIT
-  remote: https://github.com/lihtaes/campbell_gem
-  revision: 0c3d7e3ee80f0b31eb3e73f281e9af63e3d429ac
-  specs:
-    campbell_view_tool (0.1.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -53,6 +47,7 @@ GEM
       sass (>= 3.4.19)
     builder (3.2.3)
     byebug (9.0.6)
+    campbell_view_tool (0.1.0)
     coderay (1.1.1)
     coffee-rails (4.2.1)
       coffee-script (>= 2.2.0)
@@ -190,7 +185,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
   byebug
-  campbell_view_tool!
+  campbell_view_tool (~> 0.1.0)
   coffee-rails (~> 4.2)
   devise (~> 4.2)
   friendly_id (~> 5.1.0)
