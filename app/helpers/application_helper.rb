@@ -22,4 +22,20 @@ module ApplicationHelper
     CampbellViewTool::Renderer.copyright 'Bradley Campbell', 'All rights reserved'
   end
 
+  def get_highest_skill
+    @skills = Skill.all
+    @highest = MySkillTool::SkillGrabber.highest @skills
+  end
+
+end
+
+module MySkillTool
+  class SkillGrabber
+    
+    def self.highest skills
+      
+      sorted = skills.sort_by{|pu| pu[:percent_utilized]}
+      the_one = sorted.last
+    end
+  end
 end
