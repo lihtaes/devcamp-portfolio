@@ -61,7 +61,7 @@ gem 'bootstrap', '~> 4.0.0.alpha6'
 
 gem 'campbell_view_tool', '~> 0.1.0'
 
-#gem 'petergate', '~> 1.7'
+gem 'petergate', '~> 1.7'
 
 
 
