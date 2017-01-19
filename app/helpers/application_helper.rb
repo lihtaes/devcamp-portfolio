@@ -25,8 +25,8 @@ module ApplicationHelper
   def get_highest_skill
     @skills = Skill.all
     @highest = MySkillTool::SkillGrabber.highest @skills
+    @skill = "My highest skill is #{@highest.title}"
   end
-
 end
 
 module MySkillTool
