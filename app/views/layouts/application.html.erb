@@ -8,14 +8,14 @@
  -->    
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-
+    
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
 
     <meta name="keywords" content="<%= @seo_keywords %>"/>
 
   </head>
-  <body>
+  <body class="<%= action_name %>">
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">

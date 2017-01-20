@@ -31,11 +31,17 @@ body {
   height: 100%;
   background-color: #333;
 }
+
 body {
+  
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
+
+body.home {background-image: url('/assets/mac-air-wood.jpg');}
+body.about {background-image: url('/assets/professional.jpg');}
+body.contact {background-image: url('/assets/macpro-iphone-bw.jpg');}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
