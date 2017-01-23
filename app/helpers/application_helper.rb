@@ -26,19 +26,72 @@ module ApplicationHelper
     CampbellViewTool::Renderer.copyright 'Bradley Campbell', 'All rights reserved'
   end
 
-  def get_highest_skill
-    @skills = Skill.all
-    @highest = MySkillTool::SkillGrabber.highest @skills
-    @skill = "My highest skill is #{@highest.title}"
+  def nav_items 
+    [
+      {
+        url: root_path,
+        title: 'home'
+      },
+            {
+        url: about_me_path,
+        title: 'resume'
+      },
+            {
+        url: portfolios_path,
+        title: 'portfolio'
+      },
+            {
+        url: contact_path,
+        title: 'contact'
+      },
+            {
+        url: blogs_path,
+        title: 'blog'
+      }
+    ]
+      
   end
+
+  def nav_helper style, tag_type
+    nav_links = ''
+
+    nav_items.each do |item|
+      nav_links << "<#{tag_type}><a href='#{item[:url]}' class='#{style} #{active? item[:url]}'>#{item[:title]}</a></#{tag_type}>"
+    end
+
+    nav_links.html_safe
+  end
+
+  def active? path 
+    "active" if current_page? path
+  end
+
 end
 
-module MySkillTool
-  class SkillGrabber
-    
-    def self.highest skills
-      sorted = skills.sort_by{|pu| pu[:percent_utilized]}
-      the_one = sorted.last
-    end
-  end
-end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

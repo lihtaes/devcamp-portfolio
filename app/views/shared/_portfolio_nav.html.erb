@@ -22,11 +22,7 @@
           <div class="col-sm-4 py-4">
             <h4 class="text-white">Site Navigation</h4>
             <ul class="list-unstyled">
-               <li> <%= link_to "home", root_path, class: "text-white" %> </li>
-               <li> <%= link_to 'about', about_me_path, class: "text-white" %> </li>
-               <li> <%= link_to 'blog', blogs_path, class: "text-white" %> </li>
-               <li> <%= link_to 'portfolio', portfolios_path, class: "text-white" %> </li>
-               <li> <%= link_to 'contact', contact_path, class: "text-white" %> </li>
+                <%= nav_helper 'text-white', 'li'%>
                <li> <%= login_helper "text-white", true %> </li>
             </ul>
           </div>
