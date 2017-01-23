@@ -1,4 +1,7 @@
 @import "bootstrap";
+@import "font-awesome";
+
+
 
 /*
  * Globals
@@ -33,14 +36,14 @@ body {
 }
 
 body {
-  
+  font-family: 'Alegreya', serif;
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
 body.home {background-image: url('/assets/mac-air-wood.jpg');}
-body.about {background-image: url('/assets/professional.jpg');}
+body.about {background-image: url('/assets/professional-filter.jpg');}
 body.contact {background-image: url('/assets/macpro-iphone-bw.jpg');}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -160,7 +163,11 @@ body.contact {background-image: url('/assets/macpro-iphone-bw.jpg');}
 }
 
 @media (min-width: 62em) {
-  .masthead,
+  .masthead {
+    width: 65rem;
+    left:20%;
+  }
+
   .mastfoot,
   .cover-container {
     width: 55rem;
@@ -182,8 +189,14 @@ Custom Styles
 
 }
 
+.nav-masthead .nav-link {
+  color: rgba(255,255,255,.9);
+}
 
-
+.li-title {
+  font-weight: 600;
+  font-size: 1.1em;
+}
 
 .login > .card {
   width:22rem;
@@ -200,10 +213,21 @@ Custom Styles
   margin-bottom: 10px;
 }
 
+.align-left {
+  text-align: left;
+}
 
+.btn-outline-secondary {
+  color: #fff;
+  
+}
+.btn-outline-secondary:hover {
+  color: #555;
+  background-color: #fff
+}
 
-
-
-
+#home-button {
+  margin-top: 20px;
+}
 
 

@@ -1,3 +1,5 @@
+
+
 <%= form_for(blog) do |f| %>
   <% if blog.errors.any? %>
     <div id="error_explanation">
@@ -11,17 +13,17 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :title %>
-    <%= f.text_field :title %>
+    <%= f.text_field :title, class: 'form-control' %>
   </div>
 
-  <div class="field">
+  <div class="form-group">
     <%= f.label :body %>
-    <%= f.text_field :body %>
+    <%= f.text_area :body, class: 'form-control', rows: 12 %>
   </div>
 
-  <div class="actions">
-    <%= f.submit %>
+  <div class="form-group">
+    <%= f.submit 'Submit', class: 'btn btn-primary' %>
   </div>
 <% end %>

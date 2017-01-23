@@ -1,5 +1,5 @@
 @import "bootstrap";
-
+@import "font-awesome";
 /*
  * Globals
  */
@@ -162,7 +162,36 @@ h6, .h6 {
   text-align: center;
   background-color: #f9f9f9;
   border-top: .05rem solid #e5e5e5;
-}
+  }
+  
 .blog-footer p:last-child {
   margin-bottom: 0;
 }
+
+
+
+
+/*
+
+Custom Styles
+
+
+*/
+
+
+
+.social-links li {
+  font-size: 2em;
+
+
+}
+
+
+
+
+
+
+
+
+
+
