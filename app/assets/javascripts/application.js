@@ -16,5 +16,5 @@
 //= require jquery-ui
 //= require html.sortable
 //= require contact.js
-//= require turbolinks
+
 //= require_tree .
