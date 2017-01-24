@@ -23,18 +23,9 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-
-          <div class="background <%= action_name %>"></div>
-
-          <%= video_tag(
-            'home-bg.mp4',
-            class: 'background',
-            autoplay: true,
-            loop: true,
-            muted: true 
-            ) if action_name == "home"          
-            %>
         
+          <%= render 'shared/background'%>
+
           <%= render 'shared/application_nav'%>
 
           <%= yield %>
