@@ -33,7 +33,7 @@ end
 #Scope can also be defined as in the two lines below, and this is generally the preferred method for doing so.  
 #The reason this is done here as opposed to in the controller is because it makes for cleaner code, and the controller is really where simple things should be done
 
-#In the below to lines of code, you are allowing the controller to specifically call out for data assigned to the scope.  
+#In the below two lines of code, you are allowing the controller to specifically call out for data assigned to the scope.  
 #You attach a database query to a label, and using that label in the controller will pull only that data... 
 
 #See portfolio_controller
@@ -41,6 +41,7 @@ scope :ruby, -> {where(subtitle: 'Ruby on Rails')}
 
 scope :angular, -> {where(subtitle: 'Angular')}
 
+scope :by_position, -> {order('position ASC')}
 
 #initialization takes place when the NEW method is called in the controller
 after_initialize :set_defaults

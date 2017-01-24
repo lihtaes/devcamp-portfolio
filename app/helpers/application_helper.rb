@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   def copyright_helper
-    CampbellViewTool::Renderer.copyright 'Bradley Campbell', 'All rights reserved'
+    CampbellViewTool::Renderer.copyright 'Bradley Campbell |', 'All rights reserved'
   end
 
   def nav_items 
