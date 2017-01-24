@@ -13,6 +13,8 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery-ui
+//= require html.sortable
+//= require contact.js
 //= require turbolinks
 //= require_tree .
-//= require bootstrap-sprockets
