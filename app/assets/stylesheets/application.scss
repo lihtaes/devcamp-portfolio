@@ -32,7 +32,6 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
 }
 
 body {
@@ -42,9 +41,44 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
 }
 
-body.home {background-image: url('/assets/mac-air-wood.jpg');}
-body.about {background-image: url('/assets/professional-filter.jpg');}
-body.contact {background-image: url('/assets/macpro-iphone-bw.jpg');}
+/*body.home {
+  background-image: url('/assets/mac-air-wood.jpg');
+}
+body.about {
+  background-image: url('/assets/professional-filter.jpg');
+}
+body.contact {
+  background-image: url('/assets/macpro-iphone-bw.jpg');
+}
+*/
+
+.background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background-size: cover;
+}
+
+.background.home { 
+  background: image-url('mac-air-wood.jpg') no-repeat;
+}
+
+.background.about { 
+  background: image-url('professional-filter.jpg') no-repeat;
+}
+
+.background.contact { 
+  background: image-url('mac-air-wood.jpg') no-repeat;
+}
+
+
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -232,4 +266,9 @@ Custom Styles
 
 .app-nav span{
   margin-right: 1em;
+}
+
+#profile-pic img {
+  border-radius: 100px;
+  width: 180px;
 }
