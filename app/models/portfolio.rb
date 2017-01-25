@@ -3,6 +3,7 @@ class Portfolio < ApplicationRecord
   #New model technology, associated with Portfolio, with the has_many/belongs_to
   has_many :technologies
   accepts_nested_attributes_for :technologies, 
+                                allow_destroy: true,
                                 reject_if: lambda { |attrs| attrs['name'].blank? }
 
 

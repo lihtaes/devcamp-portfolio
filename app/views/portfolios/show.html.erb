@@ -1,4 +1,3 @@
-
 <div class="container portfolio-container">
   <div class="row">
     <div class="col-md-7">
@@ -18,8 +17,11 @@
       <p> <%= t.name %> </p>
 
       <% end %>
-
-      
+      <% if logged_in?(:site_admin) %>
+      <div>
+        <%= link_to 'edit item', edit_portfolio_path(@portfolio_item), class: 'btn btn-warning' %>
+      </div>
+      <%end%>
     </div>
   </div>
 </div>
