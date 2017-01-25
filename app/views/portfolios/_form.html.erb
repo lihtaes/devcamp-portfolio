@@ -10,6 +10,19 @@
   </div>
 
   <div class="form-group">
+    <label class="btn btn-primary">
+      Upload a main image file <%= f.file_field :main_image, style: 'display:none' %>
+    </label>
+
+  </div>
+
+  <div class="form-group">
+    <label class="btn btn-primary">
+      Upload a thumb image file <%= f.file_field :thumb_image, style: 'display:none' %>
+    </label>
+  </div>
+
+  <div class="form-group">
     <%= f.label :body %>
     <%= f.text_area :body, class: 'form-control', rows: 12 %>
   </div>
