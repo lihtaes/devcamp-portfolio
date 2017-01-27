@@ -33,16 +33,24 @@ module ApplicationHelper
         title: 'home'
       },
             {
-        url: about_me_path,
+        url: resume_path,
         title: 'resume'
       },
             {
         url: portfolios_path,
         title: 'portfolio'
+      }, 
+            {
+        url: about_me_path,
+        title: 'about-me'
       },
             {
         url: contact_path,
         title: 'contact'
+      },
+            {
+        url: tech_news_path,
+        title: 'tech-news'
       },
             {
         url: blogs_path,

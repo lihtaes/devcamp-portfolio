@@ -1,43 +1,23 @@
-
-<div class="inner cover">
+<div class="inner cover about-cover">
+  <h1 class="cover-heading">A Little About Me</h1>
+  <hr>
   <div class="row">
-    <div class="col-sm-3" id="profile-pic">
-      <%= image_tag 'profile.jpg', alt: 'profile image' %>
-    </div>
+    <% @instagram.each do |photo| %>
+      <div class="col-md-3">
+        <div class="about">
+          <div class="card about-card">
+            <img src="<%= photo[0] %>" width="<%= photo[1] %>">
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
 
-    <div class="col-sm-9">
-      <h1 class="cover-heading">What should you expect?</h1>
-      <p class="lead">Organized project-management. Best-practice adherence. Professional communication.</p>
-      <p class="lead">I listen intently. I ask intelligent questions. I execute directives efficiently.</p>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="about-text">
+        <p>  I was born and raised in Arizona.  I've been a web developer for about 4 years now if ya scrunch it all together; I knew I loved code the moment I laid eyes on it. With the rest of my time I'm an avid motorcycle rider, musician (singer), and old fashioned family man that values quality time and a little adventure.</p>
+      </div>
     </div>
   </div>
-  <hr>
-
-  <br><br>
-  <h4>My Development Experience:</h4>
-
-  <div class="align-left">
-    <ul>
-      <li><span class="li-title">Global Change Media</span> (4 years)</li>
-      <li><span class="li-sub">PHP - Custom Framework- MySql - Javascript - HTML/CSS - JIRA - GIT</span></li>
-        <ul>
-          <li>Project management (Atlassian JIRA) - Used task based work-flow for efficient time management, organization, and tracking development progress in a team setting</li>
-          <li>Web Application Framework (Custom)- Integrated web templates, graphic design, Javascript, and Jquery plugins into, and maintained/improved a Model/View/Controller framework written in PHP.</li>
-          <li>Brand Development - Coordinated with COO to cultivate the quality of their online presence through improving copywriting and integrating modern aesthetics and design practices.</li>
-          <li>SEO - Assisted in Utilized and integrated modern practice for improving search engine optimization.</li>
-        </ul> 
-      
-      <li><span class="li-title">Bottega Tech</span>(Junior Developer Certification)</li>
-      <li><span class="li-sub">Ruby - Rails - Postgresql - Javascript/JQuery - AngularJS - HTML/CSS/SCSS - GIT</span></li>
-        
-        <ul>
-          <li>Project management</li>
-          <li></li>
-        </ul>
-    </ul>
 </div>
-
-
-
-
-

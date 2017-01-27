@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   end
 
   def about
-    
+    @instagram = SocialTool.instagram_search
   end
 
   def contact
@@ -14,5 +14,6 @@ class PagesController < ApplicationController
 
   def tech_news
     @tweets = SocialTool.twitter_search
+    @instagram = SocialTool.instagram_search
   end
 end

@@ -6,9 +6,10 @@ Rails.application.routes.draw do
   get 'angular-items', to: 'portfolios#angular'
   get 'portfolio/:id', to: 'portfolios#show', as: 'portfolio_show'
 
-  get 'about-me', to: 'pages#about'
+  get 'resume', to: 'pages#resume'
   get 'contact', to: 'pages#contact'
   get 'tech-news', to: 'pages#tech_news'
+  get 'about-me', to: 'pages#about'
 
   resources :blogs do
     member do

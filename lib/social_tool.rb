@@ -11,4 +11,16 @@ module SocialTool
       "#{tweet.user.screen_name}: #{tweet.text}"
     end
   end
+
+  def self.instagram_search
+    data_load = HTTParty.get("https://api.instagram.com/v1/users/self/media/recent/?access_token=#{ENV.fetch('INSTAGRAM_ACCESS_TOKEN')}&count=8")
+
+    data_load['data'].collect do |photo|
+      photos = []
+      photos.push("#{photo['images']['thumbnail']['url']}", "#{photo['images']['thumbnail']['width']}" )
+    end
+  end
+
 end
+
+

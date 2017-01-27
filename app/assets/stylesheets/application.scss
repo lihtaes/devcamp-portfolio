@@ -41,6 +41,9 @@ body {
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   background-color: #333;
   background-image: url('/assets/mac-air-wood.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: fixed;
 }
 
 
@@ -48,6 +51,7 @@ body {
   position: fixed;
   top: 50%;
   left: 50%;
+  background-repeat: no-repeat;
   min-width: 100%;
   min-height: 100%;
   width: auto;
@@ -59,18 +63,20 @@ body {
 }
 
 .background.home { 
-  background: image-url('home-bg.jpg') no-repeat;
+  background: url('home-bg.jpg');
 }
 
-.background.about { 
-  background: image-url('professional-filter.jpg') no-repeat;
+.background.resume { 
+  background: url('professional-filter.jpg');
 }
 
 .background.contact { 
-  background: image-url('mac-air-wood.jpg') no-repeat;
+  background: url('mac-air-wood.jpg');
 }
 
-
+.background.about {
+  background: url('news-pen-coffee-wood2');
+}
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
 .site-wrapper {
@@ -264,3 +270,53 @@ Custom Styles
   border-radius: 100px;
   width: 180px;
 }
+
+.tech-news {
+  color: black;
+  margin: 20px;
+  transition-duration: .4s;
+}
+
+.tech-news a {
+  color: green;
+}
+
+
+.tech-news > .card{
+  padding: 20px;
+  word-wrap: break-word;
+}
+
+@media (min-width: 62em) {
+.mastfoot, .tech_news-container {
+    width: 70rem;
+}
+}
+
+.tech-news-cover {
+  margin-top:185px;
+}
+
+
+.about-card img {
+  margin:0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

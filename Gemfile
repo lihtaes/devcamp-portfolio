@@ -45,7 +45,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
-
+gem 'httparty', '~> 0.14.0'
 
 
 
