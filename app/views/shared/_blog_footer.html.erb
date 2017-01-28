@@ -1,6 +1,23 @@
-<footer class="blog-footer">
-  <p> <%= copyright_helper %> </p>
-  <p>
-  <a href="#">Back to top</a>
-  </p>
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+
+                <%  social = {'twitter' => 'http://twitter.com/lihtaes', 'facebook' => 'http://facebook.com/lihtaes', 'github' => 'http://github.com/lihtaes'}
+                      social.each do |media, link| %>
+                    <li>
+                        <a href="<%=link%>">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-<%=media%> fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+               <%end %>
+                </ul>
+                <p class="copyright text-muted"><%= copyright_helper %></p>
+            </div>
+        </div>
+    </div>
 </footer>

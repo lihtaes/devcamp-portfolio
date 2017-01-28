@@ -1,17 +1,21 @@
-  <div class="blog-post">
-    <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
-    <p class="blog-post-meta">Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago</p> 
-    
-    <% if logged_in?(:site_admin) %>
-    <p class="blog-post-meta">
-    <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-    <%= link_to 'Edit', edit_blog_path(blog) %> /
-    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
-    <% end %>
+    <div class="col-lg-8 col-md-10">
+        <div class="post-preview">
+                <h2 class="post-title">
+                    <%= link_to blog.title.upcase, blog %>
+                </h2>
+                <h3 class="post-subtitle">
+                    <%= blog.subtitle %>
+                </h3>                   
+            <p class="post-meta">Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago</p>
+            <% if logged_in?(:site_admin) %>
+            <p class="post-meta">
+            <%= link_to blog.status, toggle_status_blog_path(blog) %> /
+            <%= link_to 'Edit', edit_blog_path(blog) %> /
+            <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+            <% end %>
+        </div>
+        <hr>
+    </div>
 
-    <p><%= blog.body %></p> 
 
-    <hr>
-  </div>   
 
-        

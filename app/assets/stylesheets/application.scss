@@ -39,13 +39,26 @@ body {
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
-  background-color: #333;
+/*  background-color: #333;
   background-image: url('/assets/mac-air-wood.jpg');
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: fixed;
+  background-position: fixed;*/
 }
 
+.safari {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
+  visibility: visible;
+  opacity: 1;
+}
 
 .background {
   position: fixed;
@@ -62,17 +75,17 @@ body {
   background-size: cover;
 }
 
-.background.home { 
+/*.background.home { 
   background: url('home-bg.jpg');
 }
-
+*/
 .background.resume { 
   background: url('professional-filter.jpg');
 }
 
-.background.contact { 
+/*.background.contact { 
   background: url('mac-air-wood.jpg');
-}
+}*/
 
 .background.about {
   background: url('news-pen-coffee-wood2');
@@ -287,8 +300,8 @@ Custom Styles
   word-wrap: break-word;
 }
 
-@media (min-width: 62em) {
-.mastfoot, .tech_news-container {
+@media (min-width: 62em) { 
+  .tech_news-container {
     width: 70rem;
 }
 }
@@ -300,6 +313,7 @@ Custom Styles
 
 .about-card img {
   margin:0 auto;
+  background-color: #444;
 }
 
 

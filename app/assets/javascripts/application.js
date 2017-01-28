@@ -12,8 +12,11 @@
 //
 //= require jquery
 //= require bootstrap-sprockets
+//= require bootstrap-helper
 //= require jquery_ujs
 //= require jquery-ui
+//= require responsive_blog_helper
+//= require validation
 //= require contact
 //= require html.sortable
 //= require cocoon

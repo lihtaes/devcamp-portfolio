@@ -1,7 +1,15 @@
-    <div class="blog-header">
-      <div class="container">
-        <h1 class="blog-title">Le Blog de Campbell</h1>
-        <p class="lead blog-description">Where practical and progressive thinking meets a keyboard.</p>
-        <%= link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin)%>
-      </div>
+<header class="intro-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="site-heading">
+                    <h1>Le Blog de Campbell</h1>
+                    <hr class="small">
+                    <span class="subheading">Where practical and progressive thinking meets a keyboard</span>
+                     <%= link_to 'Write a new blog', new_blog_path if logged_in?(:site_admin)%>
+
+                </div>
+            </div>
+        </div>
     </div>
+</header>

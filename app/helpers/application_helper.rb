@@ -1,6 +1,6 @@
 module ApplicationHelper
 
-  def login_helper style, needs_br=false
+  def login_helper style=nil, needs_br=false
     if current_user.is_a?(GuestUser)
       if needs_br
         (link_to "register", new_user_registration_path, class: style) + "<br>".html_safe +
