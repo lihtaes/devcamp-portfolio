@@ -23,5 +23,5 @@ class Blog < ApplicationRecord
 #the blog model needs to know that it belongs to a specific topic with the 
 # following method
   belongs_to :topic
-
+  has_many :comments, dependent: :destroy
 end
