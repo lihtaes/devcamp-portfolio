@@ -3,22 +3,10 @@
   <hr>
   <div class="row">
     <% @tweets.each do |tweet| %>
-      <div class="col-md-3">
+      <div class="col-md-6">
         <div class="tech-news">
           <div class="card">
             <%= twitter_parsor tweet %>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-
-  <div class="row">
-    <% @instagram.each do |photo| %>
-      <div class="col-md-3">
-        <div class="tech-news">
-          <div class="card">
-            <img src="<%= photo[0] %>" width="<%= photo[1] %>">
           </div>
         </div>
       </div>

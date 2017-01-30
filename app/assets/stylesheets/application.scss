@@ -1,6 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
+@import "fonts";
 
 /*
  * Globals
@@ -35,7 +36,7 @@ body {
 }
 
 body {
-  font-family: 'Alegreya', serif;
+  font-family: 'garamond-light';
   color: #fff;
   text-align: center;
   text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
@@ -196,7 +197,7 @@ body {
 
 @media (min-width: 62em) {
   .masthead {
-    width: 65rem;
+    width: 75rem;
     left:20%;
   }
 
@@ -210,6 +211,18 @@ body {
 /*
 Custom Styles
 */
+
+
+
+
+.resume-lead {
+  font-size: 1rem;
+  margin-bottom:5px;
+}
+
+.li-point {
+  font-size: .9rem;
+}
 
 .card-block {
   color: #222;
@@ -281,28 +294,35 @@ Custom Styles
   color: green;
 }
 
+.tech_news_mastfoot{
+  width: 70rem;
+}
 
 .tech-news > .card{
   padding: 20px;
   word-wrap: break-word;
+  opacity: .8;
 }
 
 @media (min-width: 62em) {
-.mastfoot, .tech_news-container {
+.tech_news-container {
     width: 70rem;
 }
 }
 
-.tech-news-cover {
-  margin-top:185px;
-}
-
-
 .about-card img {
   margin:0 auto;
+    
 }
 
+.about-card {
+  margin:0 auto;
+  background-color: #444;
+}
 
+.about-text {
+  margin-top: 20px;
+}
 
 
 
