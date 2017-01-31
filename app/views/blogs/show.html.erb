@@ -1,6 +1,6 @@
 <div class="col-sm-8 blog-main">
-  <h2> <%= @blog.title %></h5>
-  <h5> Topic: <%= @blog.topic.title %> </h5>
+  <h2> <%= @blog.title.split.map(&:capitalize).join(' ') %></h5>
+  <h5> Topic: <%= @blog.topic.title.split.map(&:capitalize).join(' ') %> </h5>
   <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> 
   <hr>
   <p>
