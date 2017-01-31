@@ -55,6 +55,7 @@ GEM
     bootstrap (4.0.0.alpha6)
       autoprefixer-rails (>= 6.0.3)
       sass (>= 3.4.19)
+    bootstrap-select-rails (1.6.3)
     buftok (0.2.0)
     builder (3.2.3)
     byebug (9.0.6)
@@ -265,6 +266,7 @@ PLATFORMS
 
 DEPENDENCIES
   bootstrap (~> 4.0.0.alpha6)
+  bootstrap-select-rails (~> 1.6, >= 1.6.3)
   byebug
   campbell_view_tool (~> 0.1.0)
   carrierwave (~> 1.0)

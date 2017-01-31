@@ -47,7 +47,7 @@ gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
 gem 'httparty', '~> 0.14.0'
 gem 'redis', '~> 3.3', '>= 3.3.3'
-
+gem 'bootstrap-select-rails', '~> 1.6', '>= 1.6.3'
 
 
 

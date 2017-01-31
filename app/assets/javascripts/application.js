@@ -11,7 +11,8 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap-sprockets
+//= require bootstrap
+//= require bootstrap-select
 //= require jquery_ujs
 //= require jquery-ui
 //= require contact

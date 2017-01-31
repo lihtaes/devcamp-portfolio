@@ -6,6 +6,45 @@
 <% end %>
 
 
+
+<!-- <fieldset class="form-group">
+  <div class="form-check">
+    <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="development" checked>
+      Development
+    </label>
+  </div>
+  <div class="form-check">
+  <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="debugging">
+      Debugging
+    </label>
+  </div>
+  <div class="form-check">
+  <label class="form-check-label">
+      <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios3" value="best practices">
+      Best Practices
+    </label>
+  </div>
+</fieldset> -->
+
+<fieldset class="form-group <%=action_name%>-form-group"> 
+    <%= f.label :topic_id %><br>
+    <%= f.label :topic_id, "Development", :value => "1", class: "blog-radio" %>
+    <div class="form-check <%=action_name%>-form-check">
+      <%= f.radio_button :topic_id, "1", class: "form-check-input" %> 
+    </div>
+    <%= f.label :topic_id, "Debugging", :value => "2", class: "blog-radio" %>
+    <div class="form-check <%=action_name%>-form-check">
+      <%= f.radio_button :topic_id, "2", class: "form-check-input" %>  
+    </div>      
+    <%= f.label :topic_id, "Best Practices", :value => "3", class: "blog-radio" %>
+    <div class="form-check <%=action_name%>-form-check">
+      <%= f.radio_button :topic_id, "3", class: "form-check-input" %> 
+    </div>
+</fieldset>
+
+
 <div class="form-group">
   <%= f.label :title %>
   <%= f.text_field :title, class: 'form-control' %>
@@ -20,3 +59,6 @@
   <%= f.submit 'Submit Blog Post', class: 'btn btn-primary' %>
 </div>
 <% end %>
+
+
+

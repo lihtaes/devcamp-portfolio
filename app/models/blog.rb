@@ -18,7 +18,7 @@ class Blog < ApplicationRecord
 
 
 #The following method ensures that the selected data is present when creating a new database entry for respective model
-  validates_presence_of :title, :body
+  validates_presence_of :title, :body, :topic_id
 
 #the blog model needs to know that it belongs to a specific topic with the 
 # following method
