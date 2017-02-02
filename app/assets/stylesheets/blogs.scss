@@ -143,7 +143,7 @@ h6, .h6 {
 }
 .blog-post-title {
   margin-bottom: .25rem;
-  font-size: 2.5rem;
+  font-size: 1.7rem;
 }
 .blog-post-meta {
   margin-bottom: 1.25rem;
@@ -214,6 +214,17 @@ Custom Styles
   margin-top: 40px;
 }
 
+.title-hr {
+  width:20%;
+  margin-bottom: 10px;
+  text-align: left;
+  float:left;
+  }
 
+.breadcrumb {
+  padding: 0.25rem .5rem;
+}
 
-
+.comment-form-group {
+  margin-top: 100px;
+}

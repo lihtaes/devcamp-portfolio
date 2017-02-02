@@ -1,7 +1,8 @@
 <div class="col-sm-8 blog-main">
-  <h2> <%= @blog.title.split.map(&:capitalize).join(' ') %></h5>
-  <h5> Topic: <%= @blog.topic.title.split.map(&:capitalize).join(' ') %> </h5>
-  <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin)%> 
+  <h2> <%= @blog.title.split.map(&:capitalize).join(' ') %></h2>
+
+  <%= render partial: "blogs/breadcrumb", locals: { blog: @blog } %>
+
   <hr>
   <p>
     <%= @blog.body %>

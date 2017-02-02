@@ -33,13 +33,13 @@
 
 <fieldset class="form-group <%=action_name%>-form-group"> 
   <%= f.label :status %><br>
-  <%= f.label :status, "Draft", :value => "0", class: "blog-radio" %>
+  <%= f.label :status, "Draft", :value => "draft", class: "blog-radio" %>
   <div class="form-check <%=action_name%>-form-check">
-    <%= f.radio_button :status, "0", class: "form-check-input" %> 
+    <%= f.radio_button :status, "draft", class: "form-check-input" %> 
   </div> 
-  <%= f.label :status, "Published", :value => "1", class: "blog-radio" %>
+  <%= f.label :status, "Published", :value => "published", class: "blog-radio" %>
   <div class="form-check <%=action_name%>-form-check">
-    <%= f.radio_button :status, "1", class: "form-check-input" %> 
+    <%= f.radio_button :status, "published", class: "form-check-input" %> 
   </div>
 </fieldset>
 
