@@ -1,4 +1,6 @@
 class Portfolio < ApplicationRecord
+  extend FriendlyId
+  friendly_id :title, use: :slugged
   
   #New model technology, associated with Portfolio, with the has_many/belongs_to
   has_many :technologies

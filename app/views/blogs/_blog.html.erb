@@ -1,20 +1,16 @@
-<% if logged_in?(:site_admin) %>
-    <% unless blog.status == "draft" %>
+<div class="blog-post">
+    <h2 class="blog-post-title"><%= link_to blog.title.split.map(&:capitalize).join(' '), blog %></h2>
+    <p class="blog-post-meta">Topic: <%= blog.topic.title.split.map(&:capitalize).join(' ') %> | Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago</p> 
+
+    <% if logged_in?(:site_admin) %>
+    <p class="blog-post-meta">
+        <%= link_to blog.status.split.map(&:capitalize).join(' '), toggle_status_blog_path(blog) %> /
+        <%= link_to 'Edit', edit_blog_path(blog) %> /
+        <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>   
+    </p>
 <% end %>
-        <div class="blog-post">
-            <h2 class="blog-post-title"><%= link_to blog.title.split.map(&:capitalize).join(' '), blog %></h2>
-            <p class="blog-post-meta">Topic: <%= blog.topic.title.split.map(&:capitalize).join(' ') %> | Published <%=distance_of_time_in_words(blog.created_at, Time.now) %> ago</p> 
 
-            <% if logged_in?(:site_admin) %>
-                <p class="blog-post-meta">
-                    <%= link_to blog.status, toggle_status_blog_path(blog) %> /
-                    <%= link_to 'Edit', edit_blog_path(blog) %> /
-                    <%= link_to 'Destroy', blog, method: :delete, data: { confirm: 'Are you sure?' } %>   
-                </p>
-            <% end %>
+    <p><%= blog.body %></p> 
 
-            <p><%= blog.body %></p> 
-
-            <hr>
-        </div>           
-    <% end %>
+    <hr>
+</div>           

@@ -12,7 +12,7 @@ class PortfoliosController < ApplicationController
   
   def sort
     params[:order].each do |key, value|    
-      Portfolio.find(value[:id]).update(position: value[:position])
+      Portfolio.friendly.find(value[:id]).update(position: value[:position])
     end
     render nothing: true
   end
@@ -80,7 +80,7 @@ class PortfoliosController < ApplicationController
 end
 
   def set_portfolio_item
-    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item = Portfolio.friendly.find(params[:id])
   end
 
 

@@ -200,17 +200,19 @@ Custom Styles
   font-size: .8em;
 }
 
-.new-form-check {
+.new-form-check, .edit-form-check {
   margin-left:23px;
   display: inline-block;
 }
 
-.new-form-group {
+.new-form-group, .edit-form-group {
   margin-top:30px;
   display: inline-block;
 }
 
-
+#hr-sidebar {
+  margin-top: 40px;
+}
 
 
 
