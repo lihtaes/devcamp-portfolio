@@ -44,7 +44,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Your post is now live.' }
+        format.html { redirect_to @blog, error: 'Your blog was submitted.' }
       else
         format.html { render :new }
       end
@@ -94,9 +94,6 @@ class BlogsController < ApplicationController
       params.require(:blog).permit(:title, :body, :topic_id)
     end
 
-    def topics_for_sidebar
-      @topics = Topic.with_blogs
-    end
 end
 
 
