@@ -1,11 +1,12 @@
 class PagesController < ApplicationController
   def home
     @posts = Blog.all
-    @skills = Skill.all
+
   end
 
   def about
     @instagram = SocialTool.instagram_search
+    @skills = Skill.all
   end
 
   def contact
@@ -14,6 +15,5 @@ class PagesController < ApplicationController
 
   def tech_news
     @tweets = SocialTool.twitter_search
-    @instagram = SocialTool.instagram_search
   end
 end

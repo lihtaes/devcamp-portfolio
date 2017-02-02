@@ -31,6 +31,18 @@
   <%= f.text_area :body, class: 'form-control', rows: 12 %>
 </div>
 
+<fieldset class="form-group <%=action_name%>-form-group"> 
+  <%= f.label :status %><br>
+  <%= f.label :status, "Draft", :value => "0", class: "blog-radio" %>
+  <div class="form-check <%=action_name%>-form-check">
+    <%= f.radio_button :status, "0", class: "form-check-input" %> 
+  </div> 
+  <%= f.label :status, "Published", :value => "1", class: "blog-radio" %>
+  <div class="form-check <%=action_name%>-form-check">
+    <%= f.radio_button :status, "1", class: "form-check-input" %> 
+  </div>
+</fieldset>
+
 <div class="form-group">
   <%= f.submit 'Submit Blog Post', class: 'btn btn-primary' %>
 </div>
