@@ -2,22 +2,21 @@
   <h1 class="cover-heading">A Little About Me</h1>
   <hr>
   <div class="row">
-    <% @instagram.each do |photo| %>
-      <div class="col-md-3">
-        <div class="about">
-          <div class="card about-card">
-            <img src="<%= photo[0] %>" width="<%= photo[1] %>">
-          </div>
-        </div>
+    <div class="col-md-12">
+      <div class="about-text">
+        <p>  I was born and raised in Arizona.  I've been a web developer for about 3 years now if ya scrunch it all together; I knew I loved code the moment I laid eyes on it. With the rest of my time I'm an avid motorcycle rider, musician (singer), and old fashioned family man that values quality time and a little adventure.</p><br>
+        <p>Here, let's call instagram's API with my access token, parse through the data, pull out the urls of my recent posts and .each them into some img tags, you know, to show some more of my personality:</p>
       </div>
-    <% end %>
+    </div>
   </div>
 
   <div class="row">
-    <div class="col-md-12">
-      <div class="about-text">
-        <p>  I was born and raised in Arizona.  I've been a web developer for about 4 years now if ya scrunch it all together; I knew I loved code the moment I laid eyes on it. With the rest of my time I'm an avid motorcycle rider, musician (singer), and old fashioned family man that values quality time and a little adventure.</p>
+    <% @instagram.each do |photo| %>
+      <div class="col-md-3">
+        <div class="about">
+            <img src="<%= photo[0] %>" width="<%= photo[1] %>">
+        </div>
       </div>
-    </div>
+    <% end %>
   </div>
 </div>

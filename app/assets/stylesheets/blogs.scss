@@ -1,7 +1,7 @@
 @import "bootstrap";
 @import "font-awesome";
 @import "gritter";
-
+@import "shared_nav";
 
 @media (min-width: 48em) {
   html {
@@ -10,71 +10,39 @@
 }
 
 body {
-  font-family: Georgia, "Times New Roman", Times, serif;
-  color: #555;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  color: #5a5a5a;
 }
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: normal;
-  color: #333;
+body a {
+  transition-duration: .4s !important;
 }
 
+/* CUSTOMIZE THE CAROUSEL
+-------------------------------------------------- */
 
-/*
- * Override Bootstrap's default container.
- */
-
-.container {
-  max-width: 60rem;
+/* Carousel base class */
+.carousel {
+  margin-bottom: 4rem;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+  bottom: 3rem;
 }
 
-
-/*
- * Masthead for nav
- */
-
-.blog-masthead {
-  margin-bottom: 3rem;
-  background-color: #428bca;
-  -webkit-box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
-          box-shadow: inset 0 -.1rem .25rem rgba(0,0,0,.1);
+/* Declare heights because of positioning of img element */
+.carousel-item {
+  height: 17rem;
+  background-color: #777;
 }
-
-/* Nav links */
-.nav-link {
-  position: relative;
-  padding: 1rem;
-  font-weight: 500;
-  color: #cdddeb;
-}
-.nav-link:hover,
-.nav-link:focus {
-  color: #fff;
-  background-color: transparent;
-}
-
-/* Active state gets a caret at the bottom */
-.nav-link.active {
-  color: #fff;
-}
-.nav-link.active:after {
+.carousel-item > img {
   position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -.3rem;
-  vertical-align: middle;
-  content: "";
-  border-right: .3rem solid transparent;
-  border-bottom: .3rem solid;
-  border-left: .3rem solid transparent;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  height: 32rem;
 }
 
 
@@ -139,7 +107,8 @@ h6, .h6 {
  */
 
 .blog-post {
-  margin-bottom: 4rem;
+  margin-bottom: 1rem;
+  margin-top:1rem;
 }
 .blog-post-title {
   margin-bottom: .25rem;
@@ -171,12 +140,13 @@ h6, .h6 {
 
 
 
-/*
-
+/***********************
 Custom Styles
+****************************/
 
-
-*/
+.pagination {
+  margin: 20px 0px !important;
+}
 
 .comment-card > .card{
   margin-top: 15px;

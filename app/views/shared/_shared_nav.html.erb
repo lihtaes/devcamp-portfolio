@@ -1,0 +1,17 @@
+
+<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
+<div class="container">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-nav mr-auto" >
+  <%=  link_to "Bradley Campbell", root_path, class: "navbar-brand"  %>
+  </div>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav">
+      <%= nav_helper 'nav-item nav-link', 'li'%>
+      <%= login_helper 'nav-item nav-link' %>
+    </ul>
+  </div>
+  </div>
+</nav>
