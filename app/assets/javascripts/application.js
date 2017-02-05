@@ -11,11 +11,9 @@
 // about supported directives.
 //
 //= require jquery
-//= require bootstrap
-//= require bootstrap-select
-//= require jquery_ujs
 //= require jquery-ui
-//= require contact
+//= require jquery_ujs
+//= require bootstrap
 //= require html.sortable
 //= require cocoon
 //= require gritter
