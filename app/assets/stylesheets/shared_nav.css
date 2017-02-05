@@ -18,3 +18,10 @@ body a:hover {
   cursor: pointer;
   cursor: hand;
 }
+
+@media (max-width: 60em) {
+  .bg-inverse {
+  background-color: #333 !important;
+ }
+ }
+

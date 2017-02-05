@@ -3,8 +3,10 @@
 @import "font-awesome";
 @import "gritter";
 @import "shared_nav";
+@import "fonts";
 
 body {
+  font-family: 'forum';
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
 

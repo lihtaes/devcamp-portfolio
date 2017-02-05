@@ -9,6 +9,10 @@ class PagesController < ApplicationController
     @skills = Skill.all
   end
 
+  def resume
+    @skills = Skill.all
+  end
+
   def contact
     
   end

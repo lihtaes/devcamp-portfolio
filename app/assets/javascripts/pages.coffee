@@ -1,3 +1,13 @@
-# Place all the behaviors and hooks related to the matching controller here.
-# All this logic will automatically be available in application.js.
-# You can use CoffeeScript in this file: http://coffeescript.org/
+hide_nav_scroll = undefined
+
+hide_nav_scroll = ->
+  if $(this).scrollTop() > 50
+      $('.pageNav').fadeOut()
+  else
+      $('.pageNav').fadeIn()
+
+$(window).scroll hide_nav_scroll
+
+$(document).ready ->
+  $('#click-to-hide').click ->
+    $('.hide_on_click').fadeout()
