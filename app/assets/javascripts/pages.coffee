@@ -7,7 +7,3 @@ hide_nav_scroll = ->
       $('.pageNav').fadeIn()
 
 $(window).scroll hide_nav_scroll
-
-$(document).ready ->
-  $('#click-to-hide').click ->
-    $('.hide_on_click').fadeout()
