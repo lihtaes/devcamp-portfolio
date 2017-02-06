@@ -7,13 +7,13 @@
     <link href="https://fonts.googleapis.com/css?family=EB+Garamond" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBECutB4wmNwo1eEmXLCseTPrengGWb0mE"></script>
-    <link rel="icon" href="/assets/favicon.png">
 
-    <%= favicon_link_tag '/assets/favicon.png', rel: 'favicon', type: 'image/png' %> 
 
     
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
+
+    <%= favicon_link_tag 'favicons/favicon.ico' %>
     
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
