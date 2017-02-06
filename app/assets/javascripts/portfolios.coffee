@@ -8,7 +8,6 @@ set_positions = ->
   return
 
 ready = ->
-  alert("It's working")
   set_positions()
   $('.sortable').sortable()
   $('.sortable').sortable().bind 'sortupdate', (e, ui) ->
