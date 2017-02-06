@@ -36,6 +36,5 @@ hide_nav_scroll = ->
       $('.pageNav').fadeOut()
   else
       $('.pageNav').fadeIn()
-return
 
 $(window).scroll hide_nav_scroll  
