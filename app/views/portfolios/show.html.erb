@@ -10,6 +10,8 @@
 
       <p> <%= @portfolio_item.body %> </p>
 
+      <p> <%=  link_to 'Click here to see the project', @portfolio_item.link if @portfolio_item.link %> </p>
+
       <h3>Techonologies Used</h3>
 
       <% @portfolio_item.technologies.each do |t| %>

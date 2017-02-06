@@ -55,6 +55,7 @@ body a:hover {
   padding-top: 3rem;
   padding-bottom: 3rem;
   background-color: #f7f7f7;
+  margin-bottom: 50px;
 }
 
 .lead {
@@ -83,11 +84,13 @@ body a:hover {
 }
 
 footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+  margin-top:50px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
   background-color: #292b2c; 
   position: fixed;
   width: 100%;
+  bottom:0px;
 }
 
 footer p, footer a {
@@ -114,6 +117,7 @@ CUSTOM STYLES
 
 .portfolio-container {
   margin-top: 45px;
+  margin-bottom: 150px;
 }
 
 /*.portfolio-background {
