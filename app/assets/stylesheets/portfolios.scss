@@ -63,19 +63,18 @@ body a:hover {
 }
 
 .card {
-  float: left;
-  width: 33.333%;
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
 }
 
 .card > img {
-  margin-bottom: .75rem;
+
 }
 
 .card-text {
   font-size: 85%;
+  text-align: center;
 }
 
 .card a {
@@ -103,6 +102,18 @@ footer p, footer a {
 /*
 CUSTOM STYLES
 */
+
+.portfolio-index-img > img {
+  margin-bottom: .75rem;
+  max-width:350px;
+  width:100%;
+  margin:0 auto;
+}
+
+.portfolio-show-img > img {
+  width: 100%;
+  max-width: 640px;
+}
 
 .btn-outline-secondary {
   color: #999;
