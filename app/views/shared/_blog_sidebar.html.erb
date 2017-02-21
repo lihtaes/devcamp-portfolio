@@ -3,7 +3,7 @@
   <%=  source_helper(" sidebar-module alert alert-info") %>
 
   <div class="sidebar-module sidebar-module-inset"> 
-    <p><%= link_to "Write Blog", new_blog_path  if logged_in?(:site_admin) %></p>
+    <p><%= link_to "Write Blog", new_blog_path, class: "animsition-link"  if logged_in?(:site_admin) %></p>
     <h4>About</h4>
     <p>When I have time I try to write out simple tutorials and guides for new developers.  As I grow in experience and tackle more challenging projects, so will my guides deal with more complex issues.  Thanks for checking it out!</p>
   </div>          
@@ -12,7 +12,7 @@
     <h4>Blogs by Topic</h4>
     <ul>
     <% @topics.collect do |topic| %>
-    <li><%= link_to "#{topic.title}", topic %></li>
+    <li><%= link_to "#{topic.title}", topic, class: "animsition-link" %></li>
     <% end %>
     </ul>
   </div>

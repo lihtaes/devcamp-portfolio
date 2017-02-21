@@ -3,7 +3,7 @@
     <%= image_tag portfolio_img(portfolio_item.thumb_image, 'thumb') %>
   </div>
   <p class="card-text">
-    <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item) %>
+    <%= link_to portfolio_item.title, portfolio_show_path(portfolio_item), class: "animsition-link" %>
     <%= portfolio_item.subtitle %>
   </p> 
 </div>
