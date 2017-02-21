@@ -17,24 +17,23 @@
 
   </head>
   <body>
-    <div class="site-wrapper">
-      <div class="site-wrapper-inner">
-        <div class="cover-container <%=action_name%>-container">
-        
-          <%= render 'shared/background'%>
-
-          <%= render 'shared/shared_nav'%>
-
-          <%= yield %>
-
-          <%= render 'shared/application_footer'%>
-
-          <%= alerts %>
+    <div class="site-wrapper animsition">
+        <div class="site-wrapper-inner">
+          <div class="cover-container <%=action_name%>-container">
           
-        </div>  
-      </div>
-    </div>
+            <%= render 'shared/background'%>
 
+            <%= render 'shared/shared_nav'%>
+
+            <%= yield %>
+
+            <%= render 'shared/application_footer'%>
+
+            <%= alerts %>
+            
+          </div>  
+        </div>
+      </div>
   </body>
 </html>
 

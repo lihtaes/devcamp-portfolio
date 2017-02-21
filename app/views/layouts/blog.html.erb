@@ -14,26 +14,25 @@
     <meta name="keywords" content="<%= @seo_keywords %>"/>
   </head>
   <body>
+    <div class="animsition">
+      <%= render 'shared/shared_nav' %>
+      
+      <%= render 'shared/blog_masthead' %>
+      
+      <div class="container">
+        <div class="row">
+            
+          <%= yield %>
 
-    <%= render 'shared/shared_nav' %>
-    
-    <%= render 'shared/blog_masthead' %>
-    
-    <div class="container">
-      <div class="row">
-          
-        <%= yield %>
+          <%= render 'shared/blog_sidebar' %>
 
-        <%= render 'shared/blog_sidebar' %>
+        </div> <!-- end row -->
+      </div> <!-- end container -->
 
-      </div> <!-- end row -->
-    </div> <!-- end container -->
+      <%= render 'shared/blog_footer' %>
 
-    <%= render 'shared/blog_footer' %>
-
-    <%= alerts %>
-
-
+      <%= alerts %>
+    </div>
   </body>
 </html>
 

@@ -15,19 +15,21 @@
 
   </head>
   <body>
-    <%= render 'shared/shared_nav' %>
-    
-    <%= render 'shared/portfolio_masthead'%>
+    <div class="animsition">
+        <%= render 'shared/shared_nav' %>
+        
+        <%= render 'shared/portfolio_masthead'%>
 
-    <%= yield %>
+        <%= yield %>
 
-    <!-- start footer -->
-    <%= render 'shared/portfolio_footer' %>
-    <!-- end footer -->
-    
-    <%= alerts %>
+        <!-- start footer -->
+        <%= render 'shared/portfolio_footer' %>
+        <!-- end footer -->
+        
+        <%= alerts %>
 
-    <%= source_helper("application") %>
+        <%= source_helper("application") %>
+    </div>
   </body>
 </html>
 

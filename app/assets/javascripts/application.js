@@ -20,3 +20,5 @@
 //= require turbolinks
 //= require_tree .
 //= require bootstrap
+//= require animsition
+//= require anims
