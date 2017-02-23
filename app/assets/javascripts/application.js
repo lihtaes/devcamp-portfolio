@@ -22,3 +22,4 @@
 //= require bootstrap
 //= require animsition
 //= require anims
+//= require anims_back_fix
