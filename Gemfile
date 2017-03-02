@@ -51,7 +51,7 @@ gem 'bootstrap-select-rails', '~> 1.6', '>= 1.6.3'
 gem 'gretel', '~> 3.0', '>= 3.0.9'
 gem 'redcarpet', '~> 3.4'
 gem 'coderay', '~> 1.1', '>= 1.1.1'
-
+gem 'newrelic_rpm'
 
 
 ruby "2.4.0"
