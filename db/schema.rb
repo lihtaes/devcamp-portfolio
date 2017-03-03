@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170206040304) do
+ActiveRecord::Schema.define(version: 20170303173456) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,14 @@ ActiveRecord::Schema.define(version: 20170206040304) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "jobs", force: :cascade do |t|
+    t.string   "task"
+    t.integer  "resume_item_id"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["resume_item_id"], name: "index_jobs_on_resume_item_id", using: :btree
+  end
+
   create_table "portfolios", force: :cascade do |t|
     t.string   "title"
     t.string   "subtitle"
@@ -62,6 +70,14 @@ ActiveRecord::Schema.define(version: 20170206040304) do
     t.string   "slug"
     t.string   "link"
     t.index ["slug"], name: "index_portfolios_on_slug", unique: true, using: :btree
+  end
+
+  create_table "resume_items", force: :cascade do |t|
+    t.string   "title"
+    t.string   "time_there"
+    t.string   "tech_used"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
@@ -110,5 +126,6 @@ ActiveRecord::Schema.define(version: 20170206040304) do
   add_foreign_key "blogs", "topics"
   add_foreign_key "comments", "blogs"
   add_foreign_key "comments", "users"
+  add_foreign_key "jobs", "resume_items"
   add_foreign_key "technologies", "portfolios"
 end

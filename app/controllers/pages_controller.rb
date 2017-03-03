@@ -10,7 +10,7 @@ class PagesController < ApplicationController
   end
 
   def resume
-    @skills = Skill.all
+    @resume_items = ResumeItem.all
   end
 
   def contact

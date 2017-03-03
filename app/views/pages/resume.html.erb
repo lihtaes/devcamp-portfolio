@@ -1,138 +1,20 @@
 <div class="inner cover resume-cover">
-<!--   <div class="card resume-card"> -->
-    <div class="row">
-      <div class="offset-sm-1 col-sm-2 profile-pic-col">
-        <%= image_tag 'profile.jpg', alt: 'profile image', class: "profile-pic" %>
-      </div>  
-      <div class="col-sm-6">
-        <h1 class="cover-heading">What should you expect?</h1>
-        <p class="resume-lead">Organized project-management. Best-practice adherence. Professional communication.</p>
-        <p class="resume-lead">I listen intently. I ask intelligent questions. I execute directives efficiently.</p>
-        <hr id="resume-hr">
-      </div>
+  <div class="row">
+    <div class="offset-sm-1 col-sm-2 profile-pic-col">
+      <%= image_tag 'profile.jpg', alt: 'profile image', class: "profile-pic" %>
+    </div>  
+    <div class="col-sm-6">
+      <h1 class="cover-heading">What should you expect?</h1>
+      <p class="resume-lead">Organized project-management. Best-practice adherence. Professional communication.</p>
+      <p class="resume-lead">I listen intently. I ask intelligent questions. I execute directives efficiently.</p>
+      <hr id="resume-hr">
     </div>
+  </div>
 
-    <div class="row">  
-      <div class="col-sm-12">
-        <h3>My Development Experience:</h3>
-        <div class="align-left resume-items">
-          <ul>
-            <li><span class="li-title">Global Change Media</span> (2 1/2 years)</li>
-            <span class="li-sub">PHP - Custom Framework- MySql - Javascript - HTML/CSS - JIRA - GIT</span>
-            <ul>
-              <li class="li-point">Used task based work-flow for efficient time management, organization, and tracking development progress in a team setting</li>
-              <li class="li-point">Integrated web templates, graphic design, Javascript, and Jquery plugins into, and maintained/improved a Model/View/Controller framework written in PHP.</li>
-              <li class="li-point">Coordinated with COO in brand development to cultivate the quality of their online presence through improving copywriting and integrating modern aesthetics and design practices.</li>
-              <li class="li-point">Utilized and integrated modern practices for improving search engine optimization with existing websites.</li>
-            </ul> 
-              <br>
-            <li><span class="li-title">Bottega Tech</span> (Junior Developer Certification)</li>
-            <span class="li-sub">Ruby - Rails - Postgresql - Javascript/JQuery - AngularJS - HTML/CSS/SCSS - GIT</span>
-
-            <ul>
-            <li class="li-point">Built out several applications from scratch tracking progress by task with Pivotal Tracker's online project management tool.</li>
-            <li class="li-point">Learned the Rails framework and file structure from the ground up and implemented multiple features from GEM integration, custom styling, template integration, to API calls, all taught with best practice methods.</li>
-            <li class="li-point">Learned to use the Rails console to test out aspects of features during development as a best practice for ensuring functionality with the finished product.</li>
-            <li class="li-point">Utilized ByeBug, Pry, and puts debugging, along with browser developer tools, to track down bugs efficiently and resolve issues.</li>
-            <li class="li-point">Used GIT for version control and management of feature additions and refactoring on separate branches.</li>
-            </ul>
-          </ul>
-        </div>
-      </div>
+  <div class="row">  
+    <div class="col-sm-12">
+      <h3>My Development Experience:</h3>
+        <%= render partial: "resume", locals: {resume_items: @resume_items } %>
     </div>
-<!--   </div>
- --></div>
-
-
-
-
-
-
-
-  <!--    <div class="click-to-hide">
-          <p>
-            <button 
-              class="btn btn-outline-secondary" 
-              type="button" 
-              data-toggle="collapse" 
-              data-target="#gcm"
-              aria-expanded="false"
-              aria-controller="#gcm"
-              >
-              <span class="li-title">Global Change Media</span> (2 1/2 years)
-            </button>
-          </p>
-        </div>
-        <p>
-          <div class="collapse" id="gcm">
-            <div class="card card-block">
-              <span class="li-sub">PHP - Custom Framework- MySql - Javascript - HTML/CSS - JIRA - GIT</span>
-              <ul>
-                <li class="li-point">Used task based work-flow for efficient time management, organization, and tracking development progress in a team setting</li>
-                <li class="li-point">Integrated web templates, graphic design, Javascript, and Jquery plugins into, and maintained/improved a Model/View/Controller framework written in PHP.</li>
-                <li class="li-point">Coordinated with COO in brand development to cultivate the quality of their online presence through improving copywriting and integrating modern aesthetics and design practices.</li>
-                <li class="li-point">Utilized and integrated modern practices for improving search engine optimization with existing websites.</li>
-              </ul> 
-            </div>
-          </div>
-        </p>
-        <div class="click-to-hide">
-          <p>
-            <button 
-              class="btn btn-outline-secondary" 
-              type="button" 
-              data-toggle="collapse" 
-              data-target="#bt"
-              aria-expanded="false"
-              aria-controller="#bt"
-              >
-              <span class="li-title">Bottega Tech</span> (Junior Developer Certification)
-            </button>
-          </p>
-        </div>
-        <p>
-          <div class="collapse" id="bt">
-            <div class="card card-block">
-              <span class="li-sub">Ruby - Rails - Postgresql - Javascript/JQuery - AngularJS - HTML/CSS/SCSS - GIT</span>
-              <ul>
-                <li class="li-point">Built out several applications from scratch tracking progress by task with Pivotal Tracker's online project management tool.</li>
-                <li class="li-point">Learned the Rails framework and file structure from the ground up and implemented multiple features from GEM integration, custom styling, template integration, to API calls, all taught with best practice methods.</li>
-                <li class="li-point">Learned to use the Rails console to test out aspects of features during development as a best practice for ensuring functionality with the finished product.</li>
-                <li class="li-point">Utilized ByeBug, Pry, and puts debugging, along with browser developer tools, to track down bugs efficiently and resolve issues.</li>
-                <li class="li-point">Used GIT for version control and management of feature additions and refactoring on separate branches.</li>
-              </ul>
-            </div>
-          </div>
-        </p>
-      </div>
-    </div>
-  </div> -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </div>
+</div>
