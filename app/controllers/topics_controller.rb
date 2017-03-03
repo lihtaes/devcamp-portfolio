@@ -14,10 +14,6 @@ class TopicsController < ApplicationController
     end
   end
 
-
-  private
-
- 
 end
 
    

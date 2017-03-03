@@ -27,7 +27,7 @@ module ApplicationHelper
   end
 
   def nav_items 
-    [
+   nav_items = [
       {
         url: root_path,
         title: 'home'
@@ -57,6 +57,17 @@ module ApplicationHelper
         title: 'blog'
       }
     ]
+
+    resume_items = {url: resume_items_path, title: "resume_items"}
+    nav_items << resume_items if logged_in?(:site_admin)
+
+    nav_items
+  end
+
+  def this_url? string
+    url = request.path_info
+    
+    true if url.include? string
   end
 
   def nav_helper style, tag_type
