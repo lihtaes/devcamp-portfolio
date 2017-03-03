@@ -1,5 +1,5 @@
 class ResumeItemsController < ApplicationController
-  before_action :set_resume_item, only: [:new, :edit, :update, :destroy]
+  before_action :set_resume_item, only: [:edit, :update, :destroy]
   access all: {except: [:index, :destroy, :new, :create, :update, :edit, :show]}, site_admin: :all
   layout "blog"
 
