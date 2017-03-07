@@ -66,7 +66,6 @@ module ApplicationHelper
 
   def this_url? string
     url = request.path_info
-    
     true if url.include? string
   end
 
